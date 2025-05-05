@@ -1,0 +1,90 @@
+.acf-postbox:has([data-name="template_header_image"]) {
+  display: none!important;
+}
+.acf-field-true-false[data-type="true_false"] {
+  position: relative; 
+  .acf-label {
+    padding-left: 23px;
+  }
+  .acf-input {
+    display: inline-block;
+    width: auto;
+    position: absolute;
+    top: 14px;
+    left: 16px;
+  }
+}
+
+.acf-field[data-name="hero_image"] {
+  width: 30%;
+  float: left;
+  clear: none;
+  .acf-input, .acf-image-uploader, .image-wrap {
+    max-width: 100%!important;
+    width: 100%!important;
+    img {
+      width: 100%!important;
+      height: auto!important;
+    }
+  }
+}
+.acf-field[data-name],
+.acf-field[data-name] * {
+  box-sizing: border-box;
+}
+.acf-field[data-name="hero_text"] {
+  width: 70%;
+  float: left;
+  clear: none;
+  border-top: none !important;
+  padding-top: 0 !important;
+  .acf-label {
+    display: none;
+  }
+  .mce-edit-area.mce-container {
+    border-right: 1px solid #ccd0d4!important;
+  }
+}
+.acf-field[data-name="has_hero_text"] {
+  width: 70%;
+  float: left;
+  clear: none;
+  padding-top: 0 !important;
+  padding-bottom: 0!important;
+  top: 5px;
+  border-top: none !important;
+  .acf-label {
+    position: relative;
+    top: 14px;
+  }
+}
+.acf-field[data-name="hero_text"] iframe {
+  height: 150px!important;
+  min-height: 150px!important;
+}
+.acf-field[data-name="intro_featured"] .mce-edit-area.mce-container iframe,
+.acf-field[data-name="intro_text"] .mce-edit-area.mce-container iframe {
+  height: 150px!important;
+  min-height: 150px!important;
+}
+.acf-field-group[data-name="welcome"] {
+  .acf-field.acf-field-image {
+    width: 30%;
+    float: left;
+    clear: none;
+    .acf-input, .acf-image-uploader, .image-wrap {
+      max-width: 100%!important;
+      width: 100%!important;
+      img {
+        width: 100%!important;
+        height: auto!important;
+      }
+    }
+  }
+  .acf-field.acf-field-wysiwyg {
+    width: 70%;
+    float: left;
+    clear: none;
+  }
+}
+

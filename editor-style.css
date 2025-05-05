@@ -1,0 +1,23 @@
+:root {
+  --primary: #8A7E78;
+  --secondary: #90B0AC;
+  --fontPrimary: 'hypatia-sans-pro', sans-serif;
+  --fontSecondary: 'Cormorant Garamond', serif;
+}
+
+
+.custom-color {
+  color: #444;
+}
+.button-element.button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primary);
+  padding: 10px 20px 8px;
+  color: #FFF;
+  text-decoration: none;
+  font-family: var(--fontPrimary)!important;
+  font-size: 16px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
