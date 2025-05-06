@@ -3,18 +3,26 @@
  * Enqueue scripts and styles.
  */
 function acstarter_scripts() {
-	wp_enqueue_style( 'acstarter-style', get_stylesheet_uri(), array(), '0123' );
+	wp_enqueue_style( 'acstarter-style', get_stylesheet_uri(), array(), '2.0' );
+  wp_enqueue_style( 'fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css', array(), '5.0.0' );
   wp_enqueue_style( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '11.2.6' );
 
-	if (!wp_script_is( 'jquery', 'enqueued' )) {
-    wp_enqueue_script( 'jquery' );
-  }
+	wp_deregister_script('jquery');
+  wp_register_script('jquery', get_stylesheet_directory_uri() . '/assets/js/jquery.min.js', false, '3.7.1', false);
+  wp_enqueue_script('jquery');
+
+  // wp_enqueue_script( 
+  // 	'acstarter-blocks', 
+  // 	get_template_directory_uri() . '/assets/js/vendors.js', 
+  // 	array('jquery'), '20120206', 
+  // 	true 
+  // );
 
   wp_enqueue_script( 
-  	'acstarter-blocks', 
-  	get_template_directory_uri() . '/assets/js/vendors.js', 
-  	array('jquery'), '20120206', 
-  	true 
+    'fancybox', 
+    'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', 
+    array('jquery'), '5.0.0', 
+    true 
   );
 
   wp_enqueue_script( 
@@ -24,12 +32,20 @@ function acstarter_scripts() {
     true 
   );
 
-	wp_enqueue_script( 
-			'acstarter-custom', 
-			get_template_directory_uri() . '/assets/js/custom.js', 
-			array('acstarter-blocks','jquery'), '20120206', 
-			true 
-		);
+  // wp_enqueue_script( 
+  //   'acstarter-custom', 
+  //   get_template_directory_uri() . '/assets/js/scripts.js', 
+  //   array('acstarter-blocks','jquery'), '05052025', 
+  //   true 
+  // );
+
+  wp_enqueue_script( 
+     'acstarter-flexslider', 
+     get_template_directory_uri() . '/assets/js/scripts.js', 
+     array(), '20120206', 
+     true 
+   );
+
 	wp_localize_script( 'acstarter-custom', 'bellaajaxurl', array(
 		'url' => admin_url( 'admin-ajax.php' )
 	));
@@ -103,16 +119,4 @@ function acstarter_scripts() {
 add_action( 'wp_enqueue_scripts', 'acstarter_scripts' );
 
 
-// add new buttons
-add_filter( 'mce_buttons', 'myplugin_register_buttons' );
-function myplugin_register_buttons( $buttons ) {
-  array_push( $buttons, 'edbutton1');
-  return $buttons;
-}
- 
-// Load the TinyMCE plugin : editor_plugin.js (wp2.5)
-add_filter( 'mce_external_plugins', 'myplugin_register_tinymce_javascript' );
-function myplugin_register_tinymce_javascript( $plugin_array ) {
-  $plugin_array['ctabutton'] = get_stylesheet_directory_uri() . '/assets/js/custom/custom-tinymce.js';
-  return $plugin_array;
-}
+

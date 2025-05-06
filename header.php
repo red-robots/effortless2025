@@ -118,7 +118,7 @@ endif;?>
         </div><!--.row-3-->
 	</header><!-- #masthead -->
 
-
-	<div id="content" class="site-content wrapper">
+  <?php $content_class = ( is_front_page() || is_home() ) ? 'fullwidth':'wrapper'; ?>
+	<div id="content" class="site-content <?php echo $content_class ?>">
     <?php get_template_part('parts/hero'); ?>
 

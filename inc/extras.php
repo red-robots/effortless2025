@@ -56,3 +56,31 @@ function validate_email($email) {
 }
 
 
+function shortenText($string, $limit, $break=".", $pad="...") {
+  // return with no change if string is shorter than $limit
+  if(strlen($string) <= $limit) return $string;
+
+  // is $break present between $limit and the end of the string?
+  if(false !== ($breakpoint = strpos($string, $break, $limit))) {
+    if($breakpoint < strlen($string) - 1) {
+      $string = substr($string, 0, $breakpoint) . $pad;
+    }
+  }
+
+  return $string;
+}
+
+
+// add new buttons
+add_filter( 'mce_buttons', 'myplugin_register_buttons' );
+function myplugin_register_buttons( $buttons ) {
+  array_push( $buttons, 'edbutton1');
+  return $buttons;
+}
+ 
+// Load the TinyMCE plugin : editor_plugin.js (wp2.5)
+add_filter( 'mce_external_plugins', 'myplugin_register_tinymce_javascript' );
+function myplugin_register_tinymce_javascript( $plugin_array ) {
+  $plugin_array['ctabutton'] = get_stylesheet_directory_uri() . '/assets/js/custom-tinymce.js';
+  return $plugin_array;
+}
