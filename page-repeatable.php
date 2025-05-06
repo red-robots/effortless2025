@@ -14,7 +14,7 @@ get_header();
   <div class="flexible-content-wrapper">
     <?php $ctr=1; while( have_rows('flexible_content') ): the_row(); ?>
     
-    <?php include( locate_template('parts/content-repeater.php') ); ?>
+    <?php //include( locate_template('parts/content-repeater.php') ); ?>
 
     <?php $ctr++; endwhile; ?>
   </div>

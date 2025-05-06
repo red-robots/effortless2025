@@ -63,6 +63,7 @@
   min-height: 150px!important;
 }
 
+.acf-field-wysiwyg[data-name*="section_intro"] .mce-edit-area.mce-container iframe,
 .acf-field-wysiwyg[data-name*="_intro_"] .mce-edit-area.mce-container iframe,
 .acf-field-wysiwyg[data-name*="_description"] .mce-edit-area.mce-container iframe,
 .acf-field[data-name="intro_featured"] .mce-edit-area.mce-container iframe,
@@ -89,5 +90,55 @@
     float: left;
     clear: none;
   }
+}
+
+.acf-field-flexible-content {
+  * {
+    box-sizing: border-box;
+  }
+  [data-layout="image_and_text_column"] {
+    * { box-sizing: border-box; }
+    [data-name="featured_image"] {
+      width: 30%;
+      float: left;
+      clear: none;
+      .show-if-value.image-wrap {
+        position: relative;
+        width: 100%;
+        padding-bottom: 185px;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+    [data-name="text"] {
+      width: 70%;
+      float: left;
+      clear: none;
+    }
+    [data-name="bgcolor"],
+    [data-name="text_color"] {
+      width: 50%;
+      float: left;
+      clear: none;
+    }
+    [data-name="image_position"] {
+      width: 30%;
+      position: absolute;
+      top: 230px;
+    }
+  }
+}
+
+
+#pageparentdiv.postbox,
+#pageparentdiv.hide-if-js {
+  display: block!important;
 }
 
