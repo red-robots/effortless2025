@@ -134,6 +134,20 @@
       top: 230px;
     }
   }
+
+  [data-layout="two_column_intro"] {
+    [data-name="collage_images"],
+    [data-name="featured_image"] {
+      width: 30%;
+      float: left;
+      clear: none;
+    }
+    [data-name="description"] {
+      width: 70%;
+      float: left;
+      clear: none;
+    }
+  }
 }
 
 

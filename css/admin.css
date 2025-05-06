@@ -137,6 +137,17 @@
   position: absolute;
   top: 230px;
 }
+.acf-field-flexible-content [data-layout=two_column_intro] [data-name=collage_images],
+.acf-field-flexible-content [data-layout=two_column_intro] [data-name=featured_image] {
+  width: 30%;
+  float: left;
+  clear: none;
+}
+.acf-field-flexible-content [data-layout=two_column_intro] [data-name=description] {
+  width: 70%;
+  float: left;
+  clear: none;
+}
 
 #pageparentdiv.postbox,
 #pageparentdiv.hide-if-js {
