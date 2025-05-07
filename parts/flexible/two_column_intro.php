@@ -11,7 +11,7 @@
   }
 
   if( $has_content ) { ?>
-  <section class="repeatable repeatable--<?php echo get_row_layout() ?> repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?>">
+  <section data-group="<?php echo get_row_layout() ?>" class="repeatable repeatable--<?php echo get_row_layout() ?> repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?>">
     <div class="wrapper">
       <div class="flexwrap">
         <?php if($image_type=='single' && $featured_image) { ?>

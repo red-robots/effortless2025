@@ -96,4 +96,21 @@ jQuery(document).ready(function ($) {
     }
   },100);
 
+  if( $('.repeatable').length ) {
+    $('.repeatable').each(function(){
+      if( $(this).prev().hasClass('repeatable') ) {
+        if( $(this).prev().attr('data-group')!=undefined ) {
+          var groupName = $(this).prev().attr('data-group');
+          $(this).addClass('prev-' + groupName);
+        }
+      }
+      if( $(this).next().hasClass('repeatable') ) {
+        if( $(this).next().attr('data-group')!=undefined ) {
+          var groupName = $(this).next().attr('data-group');
+          $(this).addClass('next-' + groupName);
+        }
+      }
+    }); 
+  }
+
 });

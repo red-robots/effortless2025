@@ -1,7 +1,7 @@
 <?php if( get_row_layout() == 'fullwidth_video' ) {
   $videoURL = get_sub_field('fullwidth_video_url');
   if( $videoURL ) { ?>
-  <section class="repeatable repeatable--<?php echo get_row_layout() ?> repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?>">
+  <section data-group="<?php echo get_row_layout() ?>" class="repeatable repeatable--<?php echo get_row_layout() ?> repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?>">
     
     <?php if ( (strpos( strtolower($videoURL), 'youtube.com') !== false) || (strpos( strtolower($videoURL), 'youtu.b') !== false)  ) { 
     $youtubeId = extractYoutubeId($videoURL);
