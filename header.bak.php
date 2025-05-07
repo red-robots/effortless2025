@@ -104,6 +104,19 @@ endif;?>
                 <?php endif;?>
             </div><!-- wrapper -->
         </div><!--.row-2-->
+        <div class="row-3">
+            <div class="wrapper full-width-wrapper">
+                <?php $mobilebuttontext = get_field("mobile_button_text","option");?>
+                <?php if($mobilebuttontext):?>
+                    <div class="button">
+                        <?php echo $mobilebuttontext;?>
+                    </div><!--.button-->
+                <?php endif;?>
+                <nav id="mobile-site-navigation" class="main-navigation" role="navigation">
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                </nav><!-- #mobile-site-navigation -->
+            </div><!--.wrapper-->
+        </div><!--.row-3-->
 	</header><!-- #masthead -->
 
   <?php $content_class = ( is_front_page() || is_home() ) ? 'fullwidth':'wrapper'; ?>

@@ -16,16 +16,24 @@
   left: 16px;
 }
 
+.acf-field[data-name=hero_video_url],
 .acf-field[data-name=hero_image] {
-  width: 30%;
+  width: 40%;
   float: left;
   clear: none;
+  border-top: none !important;
 }
-.acf-field[data-name=hero_image] .acf-input, .acf-field[data-name=hero_image] .acf-image-uploader, .acf-field[data-name=hero_image] .image-wrap {
+.acf-field[data-name=hero_video_url] .acf-input, .acf-field[data-name=hero_video_url] .acf-image-uploader, .acf-field[data-name=hero_video_url] .image-wrap,
+.acf-field[data-name=hero_image] .acf-input,
+.acf-field[data-name=hero_image] .acf-image-uploader,
+.acf-field[data-name=hero_image] .image-wrap {
   max-width: 100% !important;
   width: 100% !important;
 }
-.acf-field[data-name=hero_image] .acf-input img, .acf-field[data-name=hero_image] .acf-image-uploader img, .acf-field[data-name=hero_image] .image-wrap img {
+.acf-field[data-name=hero_video_url] .acf-input img, .acf-field[data-name=hero_video_url] .acf-image-uploader img, .acf-field[data-name=hero_video_url] .image-wrap img,
+.acf-field[data-name=hero_image] .acf-input img,
+.acf-field[data-name=hero_image] .acf-image-uploader img,
+.acf-field[data-name=hero_image] .image-wrap img {
   width: 100% !important;
   height: auto !important;
 }
@@ -36,7 +44,7 @@
 }
 
 .acf-field[data-name=hero_text] {
-  width: 70%;
+  width: 60%;
   float: left;
   clear: none;
   border-top: none !important;

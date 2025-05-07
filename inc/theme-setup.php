@@ -40,6 +40,7 @@ function acstarter_setup() {
     'sitemap' => esc_html__( 'Sitemap', 'acstarter' ),
     'sitemapbw' => esc_html__( 'Sitemap BW', 'acstarter' ),
     'account' => esc_html__( 'Account', 'acstarter' ),
+    'footer' => esc_html__( 'Footer', 'acstarter' ),
     'login' => esc_html__( 'Login', 'acstarter' ),
     'myaccount' => esc_html__( 'My Account', 'acstarter' ),
   ) );

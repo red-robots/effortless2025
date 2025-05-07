@@ -55,6 +55,28 @@ function validate_email($email) {
   return (preg_match("/(@.*@)|(\.\.)|(@\.)|(\.@)|(^\.)/", $email) || !preg_match("/^.+\@(\[?)[a-zA-Z0-9\-\.]+\.([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/", $email)) ? false : true;
 }
 
+function extractYoutubeId($videoURL) {
+  $youtubeId = '';
+  if (strpos( strtolower($videoURL), 'youtube.com') !== false) {
+    /* if iframe */
+    if (strpos( strtolower($videoURL), 'youtube.com/embed') !== false) {
+      $parts = extractURLFromString($videoURL);
+      $youtubeId = basename($parts);
+    } else {
+
+      $parts = parse_url($videoURL);
+      parse_str($parts['query'], $query);
+      $youtubeId = (isset($query['v']) && $query['v']) ? $query['v']:''; 
+      
+    }
+  } else if (strpos( strtolower($videoURL), 'youtu.be') !== false) {
+    $parts = explode('https://youtu.be/', $videoURL);
+    $parts2 = explode('?', $parts[1]);
+    $youtubeId = $parts2[0];
+  } 
+  return $youtubeId;
+}
+
 
 function shortenText($string, $limit, $break=".", $pad="...") {
   // return with no change if string is shorter than $limit

@@ -13,72 +13,77 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper full-width-wrapper">
-			<div class="site-info clear-bottom">
-                <div class="wrapper">
-                    <nav class="account">
-                        <?php wp_nav_menu( array( 'theme_location' => 'account' ) ); ?>
-                    </nav>
-                    <?php $email = get_field("email","option");
-                    if($email):?>
-                        <div class="email">
-                            <a href="mailto:<?php echo $email;?>"><?php echo $email;?></a>
-                        </div><!--.email-->
-                    <?php endif;?>
-                    <nav class="sitemapbw">
-                        <?php wp_nav_menu( array( 'theme_location' => 'sitemapbw' ) ); ?>
-                    </nav>
-                </div><!--.wrapper-->
-            </div><!-- .site-info -->
-            <?php $facebook = get_field("facebook_link","option");
-            $instagram = get_field("instagram_link","option");
-            if($instagram||$facebook):?>
-                <div class="social">
-                    <?php if($facebook):?>
-                        <div class="facebook">
-                            <a href="<?php echo $facebook;?>">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </div><!--.facebook-->
-                    <?php endif;
-                    if($instagram):?>
-                        <div class="instagram">
-                            <a href="<?php echo $instagram;?>">
-                                <i class="fa fa-instagram"></i>                    
-                            </a>
-                        </div><!--.instagram-->
-                    <?php endif;?>        
-                </div><!--.social-->
-            <?php endif;?>
-            <div class="email-signup clear-bottom">
-                <div class="wrapper">
-                    <?php $signuptext = get_field("signup_header_text","option");?>
-                    <!-- Begin MailChimp Signup Form -->
-                    <div id="mc_embed_signup">
-                        <form action="//myeffortlessentertaing.us14.list-manage.com/subscribe/post?u=959a4d7fabeafa2e758654125&amp;id=20b4e3c60e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                            <div id="mc_embed_signup_scroll">
-                                <?php if($signuptext) echo "<h2>".$signuptext."</h2>";?>
-                                <div class="mc-field-group">
-                                    <input type="email" value="" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL">
-                                </div>
-                                <div class="mc-field-group">
-                                    <input type="text" value="" placeholder="Name" name="FNAME" class="" id="mce-FNAME">
-                                </div>
-                                <div id="mce-responses" class="clear">
-                                    <div class="response" id="mce-error-response" style="display:none"></div>
-                                    <div class="response" id="mce-success-response" style="display:none"></div>
-                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_959a4d7fabeafa2e758654125_20b4e3c60e" tabindex="-1" value=""></div>
-                                <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe">
-                            </div>
-                        </form>
-                    </div>
-                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                    <!--End mc_embed_signup-->
-                </div><!--.wrapper-->
-            </div><!--.email-signup-->
-		</div><!-- wrapper -->
+	<footer id="colophon" class="site-footer site-footer-new" role="contentinfo">
+    <div class="footWrapper">
+      <div class="flexwrap">
+        <div class="footCol footLeft">
+          <?php $logo = get_field("logo","option"); ?>
+          <?php if ($logo) { ?>
+          <div class="fullwidth">
+            <div class="footLogo">
+              <img src="<?php echo $logo['url'] ?>" alt="" />
+            </div>
+          </div>
+          <?php } ?>
+
+          <div class="flexwrap">
+            <div class="flexcol linksCol">
+              <nav class="account footLinks">
+                  <?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+              </nav>
+            </div>
+
+            <div class="flexcol socialMediaCol">
+              <?php if ($socialMedia = get_field('social_media_links', 'option')) { ?>
+                <ul class="social-media">
+                <?php foreach ($socialMedia as $sm) {
+                  $url = $sm['link'];
+                  $icon = $sm['icon'];
+                  if ( $url && filter_var($url, FILTER_VALIDATE_URL) ) { 
+                    $parse = parse_url($url);
+                    $strs = str_replace('www.','', $parse['host']);
+                    $host = explode('.', $strs);
+                    $name = ucwords($host[0]);
+                    echo '<li><a href="'.$url.'" target="_blank" class="rc-icon"><span class="sr">'.$name.'</span>'.$icon.'</a></li>';
+                  } else {
+                    if( validate_email($url) ) {
+                      echo '<li><a href="mailto:'.$url.'" class="rc-icon"><span class="sr">Email</span>'.$icon.'</a></li>';
+                    }
+                  }
+                ?>
+                <?php } ?>
+                </ul>
+              <?php } ?>
+              <?php $email = get_field('email', 'option'); ?>
+              <nav class="sitemap">
+                <?php if ($email) { ?>
+                <div class="email-info">
+                  <a href="mailto:<?php echo antispambot($email,1) ?>"><?php echo antispambot($email) ?></a>
+                </div>
+                <?php } ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'sitemapbw' ) ); ?>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="footCol footRight">
+          <?php 
+          $signup_header_text_blog = get_field('signup_header_text_blog', 'option'); 
+          $formId = get_field('gravity_form_id', 'option'); ?>
+          <?php if ($formId) { ?>
+            <?php if ( do_shortcode('[gravityform id="'.$formId.'"]') ) { ?>
+            <div class="subscriptionForm">
+              <?php if ($signup_header_text_blog) { ?>
+              <div class="formText"><?php echo anti_email_spam($signup_header_text_blog); ?></div>
+              <?php } ?>
+              <?php echo do_shortcode('[gravityform id="'.$formId.'" title="false" description="false" ajax="true"]'); ?>
+            </div>  
+            <?php } ?> 
+          <?php } ?>
+        </div>
+      </div>
+    </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
