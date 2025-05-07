@@ -12,14 +12,38 @@ get_header();
 
 	<?php if( have_rows('flexible_content') ) {  ?>
   <div class="flexible-content-wrapper">
-    <?php $ctr=1; while( have_rows('flexible_content') ): the_row(); ?>
-    
-    <?php //include( locate_template('parts/content-repeater.php') ); ?>
+    <?php 
+    $dir = get_template_directory() . "/parts/flexible/";
+    $files = scandir($dir,1);
+    $templates = [];
+    //echo "<pre>";
+    if($files) {
+      foreach($files as $file) {
+        if ( (strpos($file, 'bak') !== false) || (strpos($file, 'copy') !== false) ) {
+          //Skip....
+        } else {
+          if (strpos($file, '.php') !== false) {
+            $templates[] = $file;
+          }
+        }
+      }
+    }
+    //print_r($templates);
+    // echo "</pre>";
 
-    <?php $ctr++; endwhile; ?>
+    $ctr=1; while( have_rows('flexible_content') ): the_row();  
+      if($templates) {
+        foreach($templates as $temp) {
+          include( locate_template('parts/flexible/'.$temp) ); 
+        }
+      }
+    $ctr++; endwhile; ?>
   </div>
   <?php } ?>
 
+
+  <?php get_template_part('parts/home/testimonials'); ?>
+  <?php get_template_part('parts/home/subscribe'); ?>
 </main>
 
 <?php

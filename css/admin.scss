@@ -61,16 +61,17 @@
   }
 }
 .acf-field[data-name="hero_text"] iframe {
-  height: 150px!important;
+  height: auto!important;
   min-height: 150px!important;
 }
 
+[data-name="intro_text_content"] .mce-edit-area.mce-container iframe,
 .acf-field-wysiwyg[data-name*="section_intro"] .mce-edit-area.mce-container iframe,
 .acf-field-wysiwyg[data-name*="_intro_"] .mce-edit-area.mce-container iframe,
 .acf-field-wysiwyg[data-name*="_description"] .mce-edit-area.mce-container iframe,
 .acf-field[data-name="intro_featured"] .mce-edit-area.mce-container iframe,
 .acf-field[data-name="intro_text"] .mce-edit-area.mce-container iframe {
-  height: 150px!important;
+  height: auto!important;
   min-height: 150px!important;
 }
 .acf-field-group[data-name="welcome"] {

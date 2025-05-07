@@ -1,6 +1,7 @@
 <?php 
-$testimonial_intro_text = get_field('testimonial_intro_text');
-$display = get_field('testimonials_displaynum');
+$home_page_id = get_option('page_on_front');
+$testimonial_intro_text = get_field('testimonial_intro_text', $home_page_id);
+$display = get_field('testimonials_displaynum', $home_page_id);
 $maxItems = ($display) ? $display : 6;
 $args = array(
   'posts_per_page'=> $maxItems,

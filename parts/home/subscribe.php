@@ -1,6 +1,7 @@
 <?php
-$subscribe_image = get_field('subscribe_featured_image');
-$subscribe_text = get_field('subscribe_text');
+$home_page_id = get_option('page_on_front');
+$subscribe_image = get_field('subscribe_featured_image', $home_page_id);
+$subscribe_text = get_field('subscribe_text', $home_page_id);
 $subscribe_class = ($subscribe_image && $subscribe_text) ? 'half' : 'full';
 if( $subscribe_text ) { ?>
 <section class="subscribe-container <?php echo $subscribe_class ?>">
