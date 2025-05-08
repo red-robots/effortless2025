@@ -5,6 +5,33 @@
  */
 jQuery(document).ready(function ($) {
 
+  if( $('.main-navigation ul.menu').length ) {
+    var mobileMenu = '<ul class="mobile-menu">';
+    $('.main-navigation ul.menu > li').each(function(){
+      var linkClass = $(this).attr('class');
+      mobileMenu += '<li class="'+linkClass+'">'+$(this).html()+'</li>';
+    });
+    mobileMenu += '</ul>';
+    $('#mobile-site-navigation').html(mobileMenu);
+  }
+
+  $(document).on('click', '.mobileMenuToggle', function(e){
+    e.preventDefault();
+    let ariaControls = $(this).attr('aria-controls');
+    let isExpanded = $(this).attr('aria-expanded') === 'true';
+    $(this).attr('aria-expanded', !isExpanded);
+    if( $('#'+ariaControls).length ) {
+      $('#'+ariaControls).toggleClass('open');
+    }
+  });
+  $(document).on('click', '.mobile-menu-close, .mobileOverlay', function(e){
+    e.preventDefault();
+    $('#MobileHeader').addClass('closed');
+    setTimeout(function(){
+      $('#MobileHeader').removeClass('open closed');
+    },500);
+  });
+
   const testimonialSwiper = new Swiper('.testimonialSwiper', {
     slidesPerView: 1,
     // autoHeight: true,

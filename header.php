@@ -33,78 +33,94 @@ endif;?>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-	<header id="masthead" class="site-header site-header-new clear-bottom" role="banner">
-        <div class="row-1">
-            <div class="wrapper">
-              <div class="leftCol">
-                <nav id="site-navigation" class="main-navigation" role="navigation">
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-                </nav>
-              </div>
-
-              <div class="rightCol">
-
-                <?php $account_link = get_field("account_link","option");
-                $account_text = get_field("account_text","option");
-                if($account_text&&$account_link) { ?>
-                    <div class="account button rc-icon" style="display:none;">
-                        <a href="<?php echo $account_link;?>" class="surrounding">
-                            <?php echo $account_text; ?>
-                        </a>
-                    </div>
-                <?php } ?>
-
-                <?php if ($socialMedia = get_field('social_media_links', 'option')) { ?>
-                <?php foreach ($socialMedia as $sm) {
-                  $url = $sm['link'];
-                  $icon = $sm['icon'];
-                  if ( $url && filter_var($url, FILTER_VALIDATE_URL) ) { 
-                    $parse = parse_url($url);
-                    $strs = str_replace('www.','', $parse['host']);
-                    $host = explode('.', $strs);
-                    $name = ucwords($host[0]);
-                    echo '<a href="'.$url.'" target="_blank" class="rc-icon"><span class="sr">'.$name.'</span>'.$icon.'</a>';
-                  } else {
-                    if( validate_email($url) ) {
-                      echo '<a href="mailto:'.$url.'" class="rc-icon"><span class="sr">Email</span>'.$icon.'</a>';
-                    }
-                  }
-                ?>
-                <?php } ?>
-                <?php } ?>
-
-                <?php $members_link = get_field("members_link","option");
-                if($members_link) { ?>
-                <a href="<?php echo $members_link;?>" class="member-link surrounding rc-icon">
-                  <i class="fa fa-user"></i><span class="sr">Account</span>
-                </a>
-                <?php }?>
-
-                <div id="cart-icon" class="cart rc-icon">
-                  <a href="<?php echo wc_get_cart_url();?>">
-                    <i class="fa fa-shopping-cart"></i>
-                    <div class="num"></div><!--.num-->
+	<header id="masthead" class="site-header site-header-new <?php echo ( is_front_page() || is_home() ) ? 'is--home':'is--subpage' ?>" role="banner">
+    <div class="row-1">
+      <div class="wrapper">
+        <?php if ( is_front_page() || is_home() ) { ?>
+        <div class="leftCol">
+          <nav id="site-navigation" class="main-navigation" role="navigation">
+            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>    
+          </nav>
+        </div>
+        <?php } ?>
+        
+        <div class="rightCol">
+          <?php $account_link = get_field("account_link","option");
+          $account_text = get_field("account_text","option");
+          if($account_text&&$account_link) { ?>
+              <div class="account button rc-icon" style="display:none;">
+                  <a href="<?php echo $account_link;?>" class="surrounding">
+                      <?php echo $account_text; ?>
                   </a>
-                </div><!--.cart#cart-icon-->
-
               </div>
+          <?php } ?>
 
-              <button class="mobileMenuToggle" aria-expanded="false" aria-controls=""><span class="sr-only">Mobile Menu</span><span class="bar"></span></button>
-            </div><!--.wrapper-->
-        </div><!--.row-1-->
-        <div class="row-2">
-            <div class="wrapper full-width-wrapper">
-                <?php $logo = get_field("logo","option");
-                if($logo):?>
-                    <div class="logo">
-                        <a href="<?php echo get_bloginfo("url");?>" class="surrounding">
-                            <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['alt'];?>">
-                        </a>
-                    </div><!--.logo-->
-                <?php endif;?>
-            </div><!-- wrapper -->
-        </div><!--.row-2-->
+          <?php if ($socialMedia = get_field('social_media_links', 'option')) { ?>
+          <?php foreach ($socialMedia as $sm) {
+            $url = $sm['link'];
+            $icon = $sm['icon'];
+            if ( $url && filter_var($url, FILTER_VALIDATE_URL) ) { 
+              $parse = parse_url($url);
+              $strs = str_replace('www.','', $parse['host']);
+              $host = explode('.', $strs);
+              $name = ucwords($host[0]);
+              echo '<a href="'.$url.'" target="_blank" class="rc-icon"><span class="sr">'.$name.'</span>'.$icon.'</a>';
+            } else {
+              if( validate_email($url) ) {
+                echo '<a href="mailto:'.$url.'" class="rc-icon"><span class="sr">Email</span>'.$icon.'</a>';
+              }
+            }
+          ?>
+          <?php } ?>
+          <?php } ?>
+
+          <?php $members_link = get_field("members_link","option");
+          if($members_link) { ?>
+          <a href="<?php echo $members_link;?>" class="member-link surrounding rc-icon">
+            <i class="fa fa-user"></i><span class="sr">Account</span>
+          </a>
+          <?php }?>
+
+          <div id="cart-icon" class="cart rc-icon">
+            <a href="<?php echo wc_get_cart_url();?>">
+              <i class="fa fa-shopping-cart"></i>
+              <div class="num"></div><!--.num-->
+            </a>
+          </div><!--.cart#cart-icon-->
+        </div>
+
+        <button class="mobileMenuToggle" aria-expanded="false" aria-controls="MobileHeader">
+          <span class="sr-only">Mobile Menu</span><span class="bar"></span>
+        </button>
+      </div><!--.wrapper-->
+    </div>
+    <div class="row-2 logoContainer">
+      <div class="wrapper">
+        <?php 
+        $logo = get_field("logo","option");
+        if($logo) { ?>
+        <div class="logo">
+          <a href="<?php echo get_bloginfo("url");?>" class="surrounding">
+            <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['alt'];?>">
+          </a>
+        </div>
+        <?php } ?>
+        <?php if( !is_front_page() && !is_home() ) { ?>
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+          <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>    
+        </nav>
+        <?php } ?>
+      </div>
+    </div>
 	</header><!-- #masthead -->
+
+  <div id="MobileHeader" class="MobileHeader">
+    <div class="mobileHeaderInner">
+      <button class="mobile-menu-close"><span class="sr-only">Mobile Menu Close</span><span class="times"></span></button>
+      <nav id="mobile-site-navigation" class="mobile-main-navigation" role="navigation"></nav>
+    </div>
+    <div class="mobileOverlay"></div>
+  </div>
 
   <?php $content_class = ( is_front_page() || is_home() ) ? 'fullwidth':'wrapper'; ?>
 	<div id="content" class="site-content <?php echo $content_class ?>">
