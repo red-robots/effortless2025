@@ -1514,6 +1514,7 @@ body.page-template-page-repeatable {
       }
     }
   }
+
   .imageBlock.collage {
     div.image {
       width: 100%;
@@ -1613,12 +1614,11 @@ body.page-template-page-repeatable {
       margin-bottom: 10px;
     }
   }
+
   .flexwrap:has(.imageBlock):has(.textBlock) {
-    justify-content: space-between;
     @include tab {
       min-height: 700px;
     }
-
     @include tab {
       .imageBlock, .textBlock {
         width: calc(50% - 1.5em);
@@ -1648,6 +1648,14 @@ body.page-template-page-repeatable {
         }
       }
     }
+  }
+
+  .flexwrap:has(.imageBlock-single):has(.textBlock) {
+    justify-content: flex-end;
+  }
+
+  .flexwrap:has(.imageBlock-collage):has(.textBlock) {
+    justify-content: space-between;
   }
 
   &.prev-intro_heading_center .wrapper {

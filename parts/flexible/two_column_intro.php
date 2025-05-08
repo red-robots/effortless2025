@@ -16,7 +16,7 @@
     <div class="wrapper">
       <div class="flexwrap">
         <?php if($image_type=='single' && $featured_image) { ?>
-        <div class="imageBlock">
+        <div class="imageBlock imageBlock-single">
           <figure>
             <img src="<?php echo $featured_image['url'] ?>" alt="<?php echo $featured_image['title'] ?>" />
           </figure>
@@ -37,7 +37,7 @@
             // echo "</pre>";
           }
         ?>
-        <div class="imageBlock collage">
+        <div class="imageBlock imageBlock-collage collage">
           <div class="collage-images count-<?php echo $countImages;?> <?php echo $columnClass;?>">
             <?php if($chunks) { ?>
 
