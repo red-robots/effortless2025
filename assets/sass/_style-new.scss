@@ -219,7 +219,8 @@ body {
           list-style: none;
           display: flex;
           justify-content: flex-end;
-          gap: 1.35em;
+          // gap: 1.35em;
+          gap: 3vw;
           @media screen and (max-width: 1480px) {
             gap: 2.3vw;
           }
