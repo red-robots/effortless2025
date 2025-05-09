@@ -31,21 +31,23 @@
           $hasImage = ($image) ? 'has-image':'no-image';
         ?>
         <div class="infobox">
-          <figure class="<?php echo $hasImage ?>">
-            <?php if ($image) { ?>
-              <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-            <?php } ?>
-          </figure>
+          <div class="innerpad">
+            <figure class="<?php echo $hasImage ?>">
+              <?php if ($image) { ?>
+                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+              <?php } ?>
+            </figure>
 
-          <div class="details">
-            <?php if ($text) { ?>
-              <div class="text"><?php echo anti_email_spam($text); ?></div>
-            <?php } ?>
-            <?php if ($btnLink && $btnName) { ?>
-              <div class="button-wrap">
-                <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnName ?></a>
-              </div>
-            <?php } ?>
+            <div class="details">
+              <?php if ($text) { ?>
+                <div class="text"><?php echo anti_email_spam($text); ?></div>
+              <?php } ?>
+              <?php if ($btnLink && $btnName) { ?>
+                <div class="button-wrap">
+                  <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnName ?></a>
+                </div>
+              <?php } ?>
+            </div>
           </div>
         </div>
       <?php } ?>

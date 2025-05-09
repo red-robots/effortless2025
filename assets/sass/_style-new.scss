@@ -496,6 +496,7 @@ body.home #hero .wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: unset;
     margin: 0 auto;
     max-width: 1680px;
     width: 100%;
@@ -504,9 +505,13 @@ body.home #hero .wrapper {
     }
   }
   .infobox {
-    background-color: #F7F7F7;
     width: 100%;
     margin-bottom: 30px;
+    .innerpad {
+      width: 100%;
+      height: 100%;
+      background-color: #F7F7F7;
+    }
     @include tab {
       margin-bottom: 0;
       width: calc(33.333% - 2.75rem);
@@ -1850,7 +1855,14 @@ h2:has(.cursiveHeading) {
       justify-content: center;
     }
   }
-
+  &.buttons-align-right {
+    @include tab {
+      p:has(.custom-button-element) {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
   &.image-position-right {
     .flexwrap {
       .imageCol {
