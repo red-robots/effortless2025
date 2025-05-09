@@ -5,6 +5,16 @@
  */
 jQuery(document).ready(function ($) {
 
+  //Sticky Header
+  var stickyOffset = $('.site-header').offset().top;
+  $(window).scroll(function(){
+    var sticky = $('.site-header'),
+        scroll = $(window).scrollTop();
+
+    if (scroll >= stickyOffset) sticky.addClass('fixed');
+    else sticky.removeClass('fixed');
+  });
+
   if( $('.repeatable p').length ) {
     $('.repeatable p').each(function(){
       if( $(this).text() ) {

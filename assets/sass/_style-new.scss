@@ -108,7 +108,7 @@ body {
         padding: 0 0;
         ul.menu {
           display: flex;
-          gap:1.85rem;
+          gap:2.2vw;
         }
         ul.menu > li {
           margin-left: 0;
@@ -202,11 +202,16 @@ body {
             }
           }
         }
-        .main-navigation {
+        .mainNav {
           display: flex;
           align-items: center;
           justify-content: flex-end;
           width: 78%;
+        }
+        .main-navigation {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
         }
         ul.menu {
           margin: 0 0;

@@ -105,11 +105,13 @@ endif;?>
           </a>
         </div>
         <?php } ?>
-        <?php if( !is_front_page() && !is_home() ) { ?>
-        <nav id="site-navigation" class="main-navigation" role="navigation">
-          <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>    
-        </nav>
-        <?php } ?>
+        <div class="mainNav">
+          <?php if( !is_front_page() && !is_home() ) { ?>
+          <nav id="site-navigation" class="main-navigation" role="navigation">
+            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>    
+          </nav>
+          <?php } ?>
+        </div>
       </div>
     </div>
 	</header><!-- #masthead -->
