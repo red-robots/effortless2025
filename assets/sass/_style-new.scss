@@ -1724,6 +1724,13 @@ h2:has(.cursiveHeading) {
     padding: 80px 0;
     position: relative;
     z-index: 10;
+    text-align: center;
+  }
+  &.left .intro-wrapper {
+    text-align: left;
+  }
+  &.right .intro-wrapper {
+    text-align: right;
   }
   &.has-graphic-background {
     background: #F7F7F7;
