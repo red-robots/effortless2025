@@ -1473,7 +1473,11 @@ h2:has(.cursiveHeading) {
   p:has(.custom-button-element) {
     display: flex;
     gap: 1em;
+    &[style*="center"] {
+      justify-content: center;
+    }
   }
+
   .intro-wrapper .wrapper {
     max-width: 1200px;
     p:last-child {
@@ -1626,6 +1630,10 @@ h2:has(.cursiveHeading) {
     p:last-child {
       margin-bottom: 10px;
     }
+    @include tab {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 
   .flexwrap:has(.imageBlock):has(.textBlock) {
@@ -1659,6 +1667,15 @@ h2:has(.cursiveHeading) {
             object-position: center;
           }
         }
+      }
+    }
+
+    .imageBlock.imageBlock-single {
+      position: relative!important;
+      height: auto;
+      figure, img {
+        position: relative!important;
+        height: auto;
       }
     }
   }
@@ -1768,7 +1785,95 @@ h2:has(.cursiveHeading) {
   }
 }
 
+.repeatable--image_and_text_column {
+  .flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    .imageCol {
+      width: 100%;
+      position: relative;
+      figure {
+        margin: 0 0;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      @include tab {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        figure, img {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+        }
+        figure img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+    .textCol {
+      width: 100%;
+      padding: 40px 30px;
+      @include tab {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      h2 {
+        @include intro_heading;
+        text-align: center;
+        margin: 0 0 20px;
+      }
+    }
+    &:has(.imageCol):has(.textCol) {
+      .imageCol, .textCol {
+        width: 100%;
+        @include tab {
+          width: 50%;
+        }
+      }
+    }
+  }
+  &.buttons-align-center {
+    p:has(.custom-button-element) {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
+  &.image-position-right {
+    .flexwrap {
+      .imageCol {
+        @include tab {
+          left: unset;
+          right: 0;
+        }
+      }
+    } 
+  }
+
+  &.image-position-left {
+    .flexwrap {
+      justify-content: flex-end;
+      .imageCol {
+        @include tab {
+          left: 0;
+          right: unset;
+        }
+      }
+    } 
+  }
+}
 
 .site-main:has(.flexible-content-wrapper):has(.testimonial-carousel) {
   .flexible-content-wrapper section[data-group]:last-child {

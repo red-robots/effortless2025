@@ -1920,6 +1920,7 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .repeatable a:focus{outline:1px dotted #90b0ac;text-decoration:none}
 .repeatable .wrapper{max-width:1600px}
 .repeatable p:has(.custom-button-element){display:-webkit-box;display:-ms-flexbox;display:flex;gap:1em}
+.repeatable p:has(.custom-button-element)[style*=center]{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .repeatable .intro-wrapper .wrapper{max-width:1200px}
 .repeatable .intro-wrapper .wrapper p:last-child{margin-bottom:0}
 .repeatable--grid_layout{padding-top:50px;padding-bottom:50px}
@@ -1950,6 +1951,8 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .repeatable--two_column_intro .imageBlock.collage .collage-images.count-1 div.image img{display:block;position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
 .repeatable--two_column_intro .textBlock h2{font-family:"hypatia-sans-pro",sans-serif;font-size:35px;font-weight:400;line-height:1.4;text-transform:uppercase;color:#90b0ac;margin:0}
 .repeatable--two_column_intro .textBlock p:last-child{margin-bottom:10px}
+.repeatable--two_column_intro .flexwrap:has(.imageBlock):has(.textBlock) .imageBlock.imageBlock-single{position:relative !important;height:auto}
+.repeatable--two_column_intro .flexwrap:has(.imageBlock):has(.textBlock) .imageBlock.imageBlock-single figure,.repeatable--two_column_intro .flexwrap:has(.imageBlock):has(.textBlock) .imageBlock.imageBlock-single img{position:relative !important;height:auto}
 .repeatable--two_column_intro .flexwrap:has(.imageBlock-single):has(.textBlock){-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
 .repeatable--two_column_intro .flexwrap:has(.imageBlock-collage):has(.textBlock){-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable--two_column_intro.prev-intro_heading_center .wrapper{padding-top:0}
@@ -1967,6 +1970,15 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .repeatable--fullwidth_textcontent.has-graphic-background.next-fullwidth_textcontent{margin-bottom:0}
 .repeatable--fullwidth_textcontent.has-graphic-background:after{content:"";display:block;width:400px;height:100%;position:absolute;right:0;bottom:0;background-image:url("images/eewatermark.png");background-position:bottom right;background-size:60%;background-repeat:no-repeat;opacity:.8}
 .repeatable--fullwidth_textcontent.has-graphic-background p:has(.custom-button-element){display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-top:0;margin-bottom:0}
+.repeatable--image_and_text_column .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative}
+.repeatable--image_and_text_column .flexwrap .imageCol{width:100%;position:relative}
+.repeatable--image_and_text_column .flexwrap .imageCol figure{margin:0}
+.repeatable--image_and_text_column .flexwrap .imageCol figure img{width:100%;height:auto}
+.repeatable--image_and_text_column .flexwrap .textCol{width:100%;padding:40px 30px}
+.repeatable--image_and_text_column .flexwrap .textCol h2{font-family:"hypatia-sans-pro",sans-serif;font-size:35px;font-weight:400;line-height:1.4;text-transform:uppercase;color:#90b0ac;margin:0;text-align:center;margin:0 0 20px}
+.repeatable--image_and_text_column .flexwrap:has(.imageCol):has(.textCol) .imageCol,.repeatable--image_and_text_column .flexwrap:has(.imageCol):has(.textCol) .textCol{width:100%}
+.repeatable--image_and_text_column.buttons-align-center p:has(.custom-button-element){display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.repeatable--image_and_text_column.image-position-left .flexwrap{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
 .site-main:has(.flexible-content-wrapper):has(.testimonial-carousel) .flexible-content-wrapper section[data-group]:last-child{padding-bottom:0 !important}
 .MobileHeader,.mobileMenuToggle{display:none}
 @media screen and (min-width:350px){.template-menu .column-2 img.featured{float:right;width:40%;margin:0}
@@ -2151,6 +2163,7 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .featured-dish-container .featuredPost .text .inside{padding:30px 50px 40px}
 .featured-articles-column .hentry{width:33.333%}
 .site-footer.site-footer-new .footWrapper{padding-left:50px;padding-right:50px}
+.repeatable--two_column_intro .textBlock{padding-left:30px;padding-right:30px}
 .repeatable--two_column_intro .flexwrap:has(.imageBlock):has(.textBlock){min-height:700px}
 .repeatable--two_column_intro .flexwrap:has(.imageBlock):has(.textBlock) .imageBlock,.repeatable--two_column_intro .flexwrap:has(.imageBlock):has(.textBlock) .textBlock{width:calc(50% - 1.5em)}
 .repeatable--two_column_intro .flexwrap:has(.imageBlock):has(.textBlock) .imageBlock{position:absolute;top:0;left:0;height:100%}
@@ -2158,6 +2171,13 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .repeatable--two_column_intro .flexwrap:has(.imageBlock):has(.textBlock) .imageBlock figure img{display:block;position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
 .repeatable--fullwidth_video .video-content{height:700px}
 .repeatable--fullwidth_video .videoWrapper{-webkit-transform:scale(1.2);transform:scale(1.2)}
+.repeatable--image_and_text_column .flexwrap .imageCol{position:absolute;top:0;right:0;width:100%;height:100%}
+.repeatable--image_and_text_column .flexwrap .imageCol figure,.repeatable--image_and_text_column .flexwrap .imageCol img{display:block;position:absolute;top:0;right:0;width:100%;height:100%}
+.repeatable--image_and_text_column .flexwrap .imageCol figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
+.repeatable--image_and_text_column .flexwrap .textCol{padding-left:50px;padding-right:50px}
+.repeatable--image_and_text_column .flexwrap:has(.imageCol):has(.textCol) .imageCol,.repeatable--image_and_text_column .flexwrap:has(.imageCol):has(.textCol) .textCol{width:50%}
+.repeatable--image_and_text_column.image-position-right .flexwrap .imageCol{left:unset;right:0}
+.repeatable--image_and_text_column.image-position-left .flexwrap .imageCol{left:0;right:unset}
 }@media screen and (min-width:1100px){.template-index>.row-2>.column-1{width:25%}
 .template-index>.row-2>.column-2{width:75%}
 }@media screen and (min-width:1200px){#masthead>.row-1>.wrapper #site-navigation{width:100%;clear:none}

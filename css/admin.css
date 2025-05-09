@@ -135,9 +135,10 @@
   float: left;
   clear: none;
 }
+.acf-field-flexible-content [data-layout=image_and_text_column] [data-name=buttons_alignment],
 .acf-field-flexible-content [data-layout=image_and_text_column] [data-name=bgcolor],
 .acf-field-flexible-content [data-layout=image_and_text_column] [data-name=text_color] {
-  width: 50%;
+  width: 33.33%;
   float: left;
   clear: none;
 }

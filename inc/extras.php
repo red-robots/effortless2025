@@ -92,6 +92,19 @@ function shortenText($string, $limit, $break=".", $pad="...") {
   return $string;
 }
 
+function bella_acf_input_admin_footer() { ?>
+<script type="text/javascript">
+(function($) {
+  acf.add_filter('color_picker_args', function( args, $field ){
+    // do something to args
+    args.palettes = ['#90b0ac','#776b65','#a9785f','#c5c5c5','#f7f7f7']
+    return args;
+  });
+})(jQuery); 
+</script>
+<?php
+}
+add_action('acf/input/admin_footer', 'bella_acf_input_admin_footer');
 
 // add new buttons
 add_filter( 'mce_buttons', 'myplugin_register_buttons' );
