@@ -1713,7 +1713,7 @@ body{font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.4;color
 #masthead.site-header.site-header-new .row-1{background-color:#fff;border-bottom:1px solid #eceded}
 #masthead.site-header.site-header-new .row-1 .wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1700px;width:100%;margin:0 auto;padding-left:20px;padding-right:20px}
 #masthead.site-header.site-header-new .row-1 .wrapper #site-navigation.main-navigation{margin:0;padding:0}
-#masthead.site-header.site-header-new .row-1 .wrapper #site-navigation.main-navigation ul.menu{display:-webkit-box;display:-ms-flexbox;display:flex;gap:2.2vw}
+#masthead.site-header.site-header-new .row-1 .wrapper #site-navigation.main-navigation ul.menu{display:-webkit-box;display:-ms-flexbox;display:flex;gap:2.35vw}
 #masthead.site-header.site-header-new .row-1 .wrapper #site-navigation.main-navigation ul.menu>li{margin-left:0;margin-right:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center}
 #masthead.site-header.site-header-new .row-1 .wrapper #site-navigation.main-navigation ul.menu>li>a{display:inline-block;padding:3px}
 #masthead.site-header.site-header-new .row-1 .wrapper .rightCol{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;gap:.85rem;padding-left:30px}
@@ -2148,7 +2148,7 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .template-generic-single aside.column-3{width:22%;padding:0}
 .template-members-landing>.row-3 .item{width:23%;margin:1%}
 }@media(min-width:1080px){.wrapper{padding-left:50px;padding-right:50px}
-#masthead.site-header.site-header-new .row-1 .wrapper{padding-left:50px;padding-right:50px}
+#masthead.site-header.site-header-new .row-1 .wrapper{padding-left:100px;padding-right:100px}
 #hero .hero-content:has(.videoWrapper){height:70vh}
 #hero .videoWrapper{-webkit-transform:scale(1.2);transform:scale(1.2)}
 .welcomeText{padding-left:0}

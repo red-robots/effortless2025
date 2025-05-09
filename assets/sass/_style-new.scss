@@ -99,8 +99,8 @@ body {
       padding-left: 20px;
       padding-right: 20px;
       @include tab {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
       }
 
       #site-navigation.main-navigation {
@@ -108,7 +108,7 @@ body {
         padding: 0 0;
         ul.menu {
           display: flex;
-          gap:2.2vw;
+          gap:2.35vw;
         }
         ul.menu > li {
           margin-left: 0;
