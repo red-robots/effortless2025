@@ -96,13 +96,15 @@ function shortenText($string, $limit, $break=".", $pad="...") {
 // add new buttons
 add_filter( 'mce_buttons', 'myplugin_register_buttons' );
 function myplugin_register_buttons( $buttons ) {
-  array_push( $buttons, 'edbutton1');
+  array_push( $buttons, 'edbutton1', 'cursive_heading');
   return $buttons;
 }
  
 // Load the TinyMCE plugin : editor_plugin.js (wp2.5)
 add_filter( 'mce_external_plugins', 'myplugin_register_tinymce_javascript' );
 function myplugin_register_tinymce_javascript( $plugin_array ) {
-  $plugin_array['ctabutton'] = get_stylesheet_directory_uri() . '/assets/js/custom-tinymce.js';
+  $tinymceJs = get_stylesheet_directory_uri() . '/assets/js/custom-tinymce.js';
+  $plugin_array['ctabutton'] = $tinymceJs;
+  $plugin_array['cursive_heading_btn'] = $tinymceJs;
   return $plugin_array;
 }

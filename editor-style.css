@@ -26,3 +26,9 @@ p:has(.custom-button-element) {
   flex-wrap: wrap;
   gap: 1em;
 }
+
+h2:has(.cursiveHeading) {
+  font-family: var(--fontSecondary)!important;
+  font-style: italic;
+  color: #6d938e;
+}

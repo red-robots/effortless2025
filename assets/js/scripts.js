@@ -5,6 +5,16 @@
  */
 jQuery(document).ready(function ($) {
 
+  if( $('.repeatable p').length ) {
+    $('.repeatable p').each(function(){
+      if( $(this).text() ) {
+        if( !$(this).text().replace(/\s/g,'') ) {
+          $(this).addClass('empty');
+        }
+      }
+    });
+  }
+
   if( $('.main-navigation ul.menu').length ) {
     var mobileMenu = '<ul class="mobile-menu">';
     $('.main-navigation ul.menu > li').each(function(){

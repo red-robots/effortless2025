@@ -158,6 +158,23 @@
   clear: none;
 }
 
+[data-layout=fullwidth_textcontent] .acf-field[data-name=content_alignment] {
+  width: 30%;
+  float: left;
+  clear: none;
+}
+[data-layout=fullwidth_textcontent] .acf-field[data-name=has_graphic_background] {
+  width: 70%;
+  float: left;
+  clear: none;
+}
+[data-layout=fullwidth_textcontent] .acf-field[data-name=has_graphic_background] .acf-label {
+  top: 24px;
+}
+[data-layout=fullwidth_textcontent] .acf-field[data-name=has_graphic_background] .acf-input {
+  top: 40px;
+}
+
 #pageparentdiv.postbox,
 #pageparentdiv.hide-if-js {
   display: block !important;

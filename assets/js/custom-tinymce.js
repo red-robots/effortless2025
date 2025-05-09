@@ -1,30 +1,30 @@
 (function() {
-  // tinymce.PluginManager.add( 'highlightblock', function( editor, url ) {
-  //   var parts = url.split('assets');
-  //   var themeURL = parts[0];
+  tinymce.PluginManager.add( 'cursive_heading_btn', function( editor, url ) {
+    var parts = url.split('assets');
+    var themeURL = parts[0];
     
-  //   // Add Button to Visual Editor Toolbar
-  //   editor.addButton('custom_class', {
-  //     title: 'Highlight Text',
-  //     cmd: 'custom_class',
-  //     image: themeURL + 'images/highlight.png',
-  //   });
+    // Add Button to Visual Editor Toolbar
+    editor.addButton('cursive_heading', {
+      title: 'Cursive Heading',
+      cmd: 'cursive_heading',
+      image: themeURL + 'images/tinymce/cursive_heading.png',
+    });
 
-  //   // Add Command when Button Clicked
-  //   editor.addCommand('custom_class', function() {
-  //       var selected_text = editor.selection.getContent();
-  //       if ( selected_text.length === 0 ) {
-  //           alert( 'Please select some text.' );
-  //           return;
-  //       }
-  //       var open_column = '<div class="highlightBox">';
-  //       var close_column = '</div>';
-  //       var return_text = '';
-  //       return_text = open_column + selected_text + close_column;
-  //       editor.execCommand('mceReplaceContent', false, return_text);
-  //       return;
-  //   });
-  // });
+    // Add Command when Button Clicked
+    editor.addCommand('cursive_heading', function() {
+        var selected_text = editor.selection.getContent();
+        if ( selected_text.length === 0 ) {
+            alert( 'Please select some text.' );
+            return;
+        }
+        var open_column = '<h2><span class="cursiveHeading">';
+        var close_column = '</span></h2>';
+        var return_text = '';
+        return_text = open_column + selected_text + close_column;
+        editor.execCommand('mceReplaceContent', false, return_text);
+        return;
+    });
+  });
 
   tinymce.PluginManager.add( 'ctabutton', function( editor, url ) {
       //console.log(url);
@@ -35,7 +35,7 @@
       editor.addButton('edbutton1', {
           title: 'Custom Button',
           cmd: 'edbutton1',
-          image: themeURL + 'images/custom-button.png',
+          image: themeURL + 'images/tinymce/custom-button.png',
       });
 
       // Add Command when Button Clicked

@@ -3,7 +3,7 @@ html, body, *, ::before, ::after {
 }
 @mixin intro_heading {
   font-family: $font_primary;
-  font-size: 33px;
+  font-size: 35px;
   font-weight: 400;
   line-height: 1.4;
   text-transform: uppercase;
@@ -1441,6 +1441,9 @@ body.page-template-page-repeatable {
 .repeatable {
   position: relative;
   overflow: hidden;
+  p.empty {
+    display: none!important;
+  }
   a {
     display: inline-block;
     transition: all ease .3s;
@@ -1710,8 +1713,50 @@ body.page-template-page-repeatable {
 }
 
 .repeatable--fullwidth_textcontent {
+  position: relative;
   .intro-wrapper {
     padding: 80px 0;
+    position: relative;
+    z-index: 10;
+  }
+  &.has-graphic-background {
+    background: #F7F7F7;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    .intro-wrapper {
+      padding-top: 70px;
+    }
+    &.prev-fullwidth_textcontent {
+      margin-top: 0;
+    }
+    &.next-fullwidth_textcontent {
+      margin-bottom: 0;
+    }
+    &:after {
+      content:"";
+      display: block;
+      width: 400px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-image: url('images/eewatermark.png');
+      background-position: bottom right;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      opacity: 0.8;
+    }
+    p:has(.custom-button-element) {
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  h2:has(.cursiveHeading) {
+    text-transform: none!important;
+    font-family: $font_secondary!important;
+    font-style: italic;
   }
 }
 
