@@ -1912,6 +1912,7 @@ body.page-template-page-repeatable #hero.hero-image:has(.heroText) .heroText h1,
 body.page-template-page-repeatable .testimonial-carousel{padding-top:50px;padding-bottom:50px}
 body.page-template-page-repeatable .testimonial-carousel .intro-wrapper{padding-bottom:0}
 body.page-template-page-repeatable .subscribe-container{padding-bottom:80px}
+h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Garamond",serif !important;font-style:italic}
 .repeatable{position:relative;overflow:hidden}
 .repeatable p.empty{display:none !important}
 .repeatable a{display:inline-block;-webkit-transition:all ease .3s;transition:all ease .3s;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;color:#90b0ac}
@@ -1964,7 +1965,6 @@ body.page-template-page-repeatable .subscribe-container{padding-bottom:80px}
 .repeatable--fullwidth_textcontent.has-graphic-background.next-fullwidth_textcontent{margin-bottom:0}
 .repeatable--fullwidth_textcontent.has-graphic-background:after{content:"";display:block;width:400px;height:100%;position:absolute;right:0;bottom:0;background-image:url("images/eewatermark.png");background-position:bottom right;background-size:60%;background-repeat:no-repeat;opacity:.8}
 .repeatable--fullwidth_textcontent.has-graphic-background p:has(.custom-button-element){display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-top:0;margin-bottom:0}
-.repeatable--fullwidth_textcontent h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Garamond",serif !important;font-style:italic}
 .site-main:has(.flexible-content-wrapper):has(.testimonial-carousel) .flexible-content-wrapper section[data-group]:last-child{padding-bottom:0 !important}
 .MobileHeader,.mobileMenuToggle{display:none}
 @media screen and (min-width:350px){.template-menu .column-2 img.featured{float:right;width:40%;margin:0}

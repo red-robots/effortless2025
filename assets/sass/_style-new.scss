@@ -1438,6 +1438,12 @@ body.page-template-page-repeatable {
   }
 }
 
+h2:has(.cursiveHeading) {
+  text-transform: none!important;
+  font-family: $font_secondary!important;
+  font-style: italic;
+}
+
 .repeatable {
   position: relative;
   overflow: hidden;
@@ -1752,11 +1758,6 @@ body.page-template-page-repeatable {
       margin-top: 0;
       margin-bottom: 0;
     }
-  }
-  h2:has(.cursiveHeading) {
-    text-transform: none!important;
-    font-family: $font_secondary!important;
-    font-style: italic;
   }
 }
 
