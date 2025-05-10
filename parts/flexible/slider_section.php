@@ -4,10 +4,24 @@
   $sliderImages = get_sub_field('slide_images');
   $section_column = get_sub_field('section_column');
   $text_alignment = get_sub_field('text_alignment');
+  $bgcolor = get_sub_field('bgcolor');
+  $textcolor = get_sub_field('textcolor');
   if($text_alignment) {
     $section_column .= ' text-align-' . $text_alignment;
   }
   if( $sliderImages ) { ?>
+  <?php if ($bgcolor || $textcolor) { ?>
+  <style>
+    .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> .textCol {
+      background: <?php echo $bgcolor ?>;
+    }
+    .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> .textCol,
+    .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> .textCol p,
+    .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> .textCol li {
+      color: <?php echo $textcolor ?>;
+    }
+  </style>  
+  <?php } ?>
   <section data-group="<?php echo get_row_layout() ?>" class="repeatable repeatable--<?php echo get_row_layout() ?> repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?>">
     <div class="wrapper">
       <div class="flexwrap <?php echo $section_column ?>">

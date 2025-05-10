@@ -1990,8 +1990,10 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .repeatable--slider_section{margin-top:80px;margin-bottom:80px}
 .repeatable--slider_section.prev-intro_heading_center{margin-top:0}
 .repeatable--slider_section.next-intro_heading_center{margin-bottom:0}
-.repeatable--slider_section .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.repeatable--slider_section .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:unset;-ms-flex-align:unset;align-items:unset}
 .repeatable--slider_section .flexwrap .textCol,.repeatable--slider_section .flexwrap .sliderCol{width:100%;position:relative}
+.repeatable--slider_section .flexwrap .textCol{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.repeatable--slider_section .flexwrap .textCol .text{width:100%}
 .repeatable--slider_section .flexwrap .textCol h2{font-family:"hypatia-sans-pro",sans-serif;font-size:35px;font-weight:400;line-height:1.4;text-transform:uppercase;color:#90b0ac;margin:0;text-transform:none}
 .repeatable--slider_section .flexwrap .textCol .text{padding:20px}
 .repeatable--slider_section .flexwrap .sliderCol{min-height:360px}

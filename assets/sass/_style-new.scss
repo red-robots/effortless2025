@@ -1938,11 +1938,18 @@ h2:has(.cursiveHeading) {
   .flexwrap {
     display: flex;
     flex-wrap: wrap;
+    align-items: unset;
     .textCol, .sliderCol {
       width: 100%;
       position: relative;
     }
     .textCol {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .text {
+        width: 100%;
+      }
       h2 {
         @include intro_heading;
         text-transform: none;

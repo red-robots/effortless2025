@@ -175,6 +175,22 @@
   top: 40px;
 }
 
+[data-layout=slider_section] [data-name=text_alignment],
+[data-layout=slider_section] [data-name=bgcolor],
+[data-layout=slider_section] [data-name=textcolor] {
+  float: left;
+  clear: none;
+}
+[data-layout=slider_section] [data-name=text_alignment] {
+  width: 30%;
+}
+[data-layout=slider_section] [data-name=bgcolor] {
+  width: 18%;
+}
+[data-layout=slider_section] [data-name=textcolor] {
+  width: 52%;
+}
+
 #pageparentdiv.postbox,
 #pageparentdiv.hide-if-js {
   display: block !important;
