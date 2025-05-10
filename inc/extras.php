@@ -106,6 +106,12 @@ function bella_acf_input_admin_footer() { ?>
 }
 add_action('acf/input/admin_footer', 'bella_acf_input_admin_footer');
 
+// add_filter( 'tiny_mce_before_init', function( $settings ) {
+//   $settings['height'] = '120';
+//   $settings['autoresize_max_height'] = '120';
+//   return $settings;   
+// } );
+
 // add new buttons
 add_filter( 'mce_buttons', 'myplugin_register_buttons' );
 function myplugin_register_buttons( $buttons ) {

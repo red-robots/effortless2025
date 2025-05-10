@@ -20,37 +20,39 @@
 
     <?php if ($items) { ?>
     <div class="featuredArticles grid-posts numcol-<?php echo $numcol ?>">
-      <div class="flexwrap">
-        <?php foreach ($items as $a) { 
-          $image = $a['image'];
-          $text = $a['column_description'];
-          $btn = $a['button'];
-          $btnLink = (isset($btn['url'])) ? $btn['url'] : '';
-          $btnName = (isset($btn['title'])) ? $btn['title'] : '';
-          $btnTarget = (isset($btn['target'])) ? $btn['target'] : '';
-          $hasImage = ($image) ? 'has-image':'no-image';
-        ?>
-        <div class="infobox">
-          <div class="innerpad">
-            <figure class="<?php echo $hasImage ?>">
-              <?php if ($image) { ?>
-                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-              <?php } ?>
-            </figure>
+      <div class="wrapper">
+        <div class="flexwrap">
+          <?php foreach ($items as $a) { 
+            $image = $a['image'];
+            $text = $a['column_description'];
+            $btn = $a['button'];
+            $btnLink = (isset($btn['url'])) ? $btn['url'] : '';
+            $btnName = (isset($btn['title'])) ? $btn['title'] : '';
+            $btnTarget = (isset($btn['target'])) ? $btn['target'] : '';
+            $hasImage = ($image) ? 'has-image':'no-image';
+          ?>
+          <div class="infobox">
+            <div class="innerpad">
+              <figure class="<?php echo $hasImage ?>">
+                <?php if ($image) { ?>
+                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                <?php } ?>
+              </figure>
 
-            <div class="details">
-              <?php if ($text) { ?>
-                <div class="text"><?php echo anti_email_spam($text); ?></div>
-              <?php } ?>
-              <?php if ($btnLink && $btnName) { ?>
-                <div class="button-wrap">
-                  <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnName ?></a>
-                </div>
-              <?php } ?>
+              <div class="details">
+                <?php if ($text) { ?>
+                  <div class="text"><?php echo anti_email_spam($text); ?></div>
+                <?php } ?>
+                <?php if ($btnLink && $btnName) { ?>
+                  <div class="button-wrap">
+                    <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnName ?></a>
+                  </div>
+                <?php } ?>
+              </div>
             </div>
           </div>
+        <?php } ?>
         </div>
-      <?php } ?>
       </div>
     </div>
     <?php } ?>

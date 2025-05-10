@@ -5,11 +5,13 @@
     
     <?php if ( (strpos( strtolower($videoURL), 'youtube.com') !== false) || (strpos( strtolower($videoURL), 'youtu.b') !== false)  ) { 
     $youtubeId = extractYoutubeId($videoURL);
-    $embed_url = 'https://www.youtube.com/embed/'.$youtubeId.'?version=3&rel=0&loop=0'; 
+    $embed_url = 'https://www.youtube.com/embed/'.$youtubeId.'?version=3&rel=0&loop=0&showinfo=0'; 
     $mainImage = 'https://i.ytimg.com/vi/'.$youtubeId.'/maxresdefault.jpg'; ?>
-    <div class="video-content">
-      <div class="videoWrapper iframe-youtube">
-        <iframe class="videoIframe" data-vid="youtube" src="<?php echo $embed_url; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="wrapper">
+      <div class="video-content">
+        <div class="videoWrapper iframe-youtube">
+          <iframe class="videoIframe" data-vid="youtube" src="<?php echo $embed_url; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
     <?php } ?>
@@ -21,9 +23,11 @@
     $vimeoData = ($vimeoId) ? get_vimeo_data($vimeoId) : '';
     $data = json_decode( file_get_contents( 'https://vimeo.com/api/oembed.json?url=' . $videoURL ) );
     $vimeoImage = ($data) ? $data->thumbnail_url : '';  ?>
-    <div class="video-content">
-      <div class="videoWrapper iframe-vimeo">
-        <iframe class="videoIframe" data-vid="vimeo" src="https://player.vimeo.com/video/<?php echo $vimeoId?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div class="wrapper">
+      <div class="video-content">
+        <div class="videoWrapper iframe-vimeo">
+          <iframe class="videoIframe" data-vid="vimeo" src="https://player.vimeo.com/video/<?php echo $vimeoId?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
     <?php } ?>
@@ -31,3 +35,4 @@
   </section>
   <?php } ?>
 <?php } ?>
+

@@ -71,7 +71,7 @@
 .acf-field-wysiwyg[data-name*="_description"] .mce-edit-area.mce-container iframe,
 .acf-field[data-name="intro_featured"] .mce-edit-area.mce-container iframe,
 .acf-field[data-name="intro_text"] .mce-edit-area.mce-container iframe {
-  height: auto!important;
+  //height: auto!important;
   min-height: 150px!important;
 }
 .acf-field-group[data-name="welcome"] {

@@ -17,7 +17,7 @@ $sm: 768px;
 $md: 1080px;
 $lg: 1300px;
 $xl: 1480px;
-$wrapper: 1700px;
+$wrapper: 1600px;
 
 @mixin xs { @media (min-width: $xs) { @content; } }
 @mixin sm { @media (min-width: $sm) { @content; } }
