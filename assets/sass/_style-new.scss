@@ -1543,6 +1543,9 @@ h2:has(.cursiveHeading) {
     padding-top: 80px;
     padding-bottom: 50px;
   }
+  &.next-fullwidth_video {
+    padding-bottom: 30px;
+  }
   .flexwrap {
     display: flex;
     flex-wrap: wrap;

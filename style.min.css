@@ -1934,6 +1934,7 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .repeatable--grid_layout .intro-wrapper{padding-bottom:50px}
 .repeatable--grid_layout .featuredArticles{padding-bottom:0;margin-bottom:0}
 .repeatable--two_column_intro .wrapper{padding-top:80px;padding-bottom:50px}
+.repeatable--two_column_intro.next-fullwidth_video{padding-bottom:30px}
 .repeatable--two_column_intro .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;gap:1.5em;position:relative;overflow:hidden}
 .repeatable--two_column_intro .flexwrap:has(.collage){-webkit-box-align:unset;-ms-flex-align:unset;align-items:unset;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable--two_column_intro .flexwrap:has(.collage) .textBlock{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
