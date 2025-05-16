@@ -13,17 +13,6 @@
     $addonClass .= ' buttons-align-'.$buttons_alignment;
   }
   if( $featured_image ||  $description ) { ?>
-  <style>
-    .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?>,
-    .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> p, 
-    .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> li,
-    .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> table {
-      color: <?php echo $text_color ?>;
-    }
-    .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> .flexwrap {
-      background-color: <?php echo $bgcolor ?>;
-    }
-  </style>
   <section data-group="<?php echo get_row_layout() ?>" class="repeatable repeatable--<?php echo get_row_layout() ?> repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?><?php echo $addonClass ?>">
     <div class="wrapper">
       <div class="flexwrap">
@@ -39,6 +28,18 @@
         <?php } ?>
       </div>
     </div>
+
+    <style>
+      .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?>,
+      .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> p, 
+      .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> li,
+      .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> table {
+        color: <?php echo $text_color ?>;
+      }
+      .repeatable--<?php echo get_row_layout() ?>-<?php echo $ctr ?> .flexwrap {
+        background-color: <?php echo $bgcolor ?>;
+      }
+    </style>
   </section>
   <?php } ?>
 <?php } ?>
