@@ -78,7 +78,7 @@ jQuery(document).ready(function ($) {
     noSwiping: true,
     simulateTouch: true,
     speed: 1000,
-
+    slidesPerView: 1,
     autoplay: {
       delay: 6000
     },
@@ -91,13 +91,13 @@ jQuery(document).ready(function ($) {
       prevEl: ".swiper-button-prev"
     },
     breakpoints: {
-      600: {
+      1080: {
         slidesPerView: 1,
       },
-      960: {
+      1024: {
         slidesPerView: 2,
       },
-      1024: {
+      1250: {
         slidesPerView: 3,
       }
     }
