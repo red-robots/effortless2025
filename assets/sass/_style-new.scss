@@ -1721,7 +1721,7 @@ h2:has(.cursiveHeading) {
   }
 
   .flexwrap:has(.imageBlock-single):has(.textBlock) {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   .flexwrap:has(.imageBlock-collage):has(.textBlock) {
@@ -2292,6 +2292,12 @@ h2:has(.cursiveHeading) {
         margin-top: 35px;
       }
     }
+  }
+}
+
+body.page-template:not(.page-template-page-repeatable) {
+  #content.wrapper {
+    padding-bottom: 50px;
   }
 }
 
