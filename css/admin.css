@@ -16,6 +16,23 @@
   left: 16px;
 }
 
+[data-name="magazine_gallery"] {
+  tr.acf-field[data-name="alt"],
+  tr.acf-field[data-name="description"],
+  p.media-types.media-types-required-info {
+    display: none!important;
+  }
+}
+[data-name="clickthroughTarget"] {
+  &.acf-field-true-false[data-type=true_false] .acf-input {
+    position: relative;
+    top: 4px;
+    left: 0;
+    margin: 0 0 !important;
+    padding: 0 0 !important;
+  }
+}
+
 .acf-field[data-name=hero_video_url],
 .acf-field[data-name=hero_image] {
   width: 40%;

@@ -1,4 +1,5 @@
 (function() {
+
   tinymce.PluginManager.add( 'cursive_heading_btn', function( editor, url ) {
     var parts = url.split('assets');
     var themeURL = parts[0];

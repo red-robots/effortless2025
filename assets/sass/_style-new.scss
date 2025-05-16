@@ -2080,6 +2080,132 @@ h2:has(.cursiveHeading) {
   }
 }
 
+.repeatable--magazine_layout {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  .intro-wrapper {
+    padding-bottom: 30px;
+  }
+  .magazineBlocks {
+    .flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .magazine {
+      width: 100%;
+      padding: 15px;
+      figure {
+        height: 100%;
+        margin: 0 0;
+        background-color: #F7F7F7;
+        position: relative;
+        .image-wrap {
+          // display: block;
+          display: flex;
+          flex-wrap: wrap;
+          // align-items: center;
+          // justify-content: space-between;
+          position: relative;
+          background-color: #f5f5f5;
+          height: 100%;
+          .image {
+            width: 100%;
+            display: block;
+            background-color: #b2b2b2;
+            position: relative;
+            padding-bottom: 115%;
+            overflow: hidden;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform ease .3s;
+          }
+        }
+
+        figcaption {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          margin: 0 0;
+          padding: 10px 10px!important;
+          width: 100%;
+          .imageTitle, .imageText {
+            font-family: $font_primary!important;
+            line-height: 1.2;
+            width: 100%;
+            text-align: center;
+          } 
+          .imageTitle {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: shade($color_secondary, 10%);
+          }
+          .imageText {
+            font-size: 18px;
+            color: #424242;
+          }
+        }
+
+        a.image-link {
+          text-decoration: none;
+          * {
+            text-decoration: none;
+          }
+          &:hover, &:focus {
+            box-shadow: 0 6px 20px #becbc9;
+            background-color: $color_secondary;
+            transform: scale(1.08)!important;
+            .imageTitle, .imageText {
+              color: #FFF!important;
+            }
+            img {
+              transform: scale(1.02);
+            }
+          }
+        }
+      }
+    }
+    &.perrow2 .magazine {
+      width: 50%;
+    }
+    &.perrow3 .magazine {
+      width: 33.333%;
+    }
+    &.perrow4 .magazine {
+      width: 25%;
+    }
+    &.perrow5 .magazine {
+      width: 25%;
+    }
+
+    @include max($md) {
+      .magazine {
+        width: 33.333%!important;
+      }
+    }
+    @include max($sm) {
+      .magazine {
+        width: 50%!important;
+      }
+    }
+    @include max($xs) {
+      .magazine {
+        width: 100%!important;
+      }
+    }
+  }
+}
+
 .site-main:has(.flexible-content-wrapper):has(.testimonial-carousel) {
   .flexible-content-wrapper section[data-group]:last-child {
     padding-bottom: 0!important;

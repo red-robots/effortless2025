@@ -95,11 +95,31 @@ function shortenText($string, $limit, $break=".", $pad="...") {
 function bella_acf_input_admin_footer() { ?>
 <script type="text/javascript">
 (function($) {
-  acf.add_filter('color_picker_args', function( args, $field ){
-    // do something to args
-    args.palettes = ['#90b0ac','#776b65','#a9785f','#c5c5c5','#f7f7f7']
-    return args;
-  });
+  
+
+  if ( typeof acf !== 'undefined' ) {
+    
+    //Set color picker color options
+    acf.add_filter('color_picker_args', function( args, $field ){
+      args.palettes = ['#90b0ac','#776b65','#a9785f','#c5c5c5','#f7f7f7']
+      return args;
+    });
+
+    acf.add_action( 'wysiwyg_tinymce_init', function( ed, id, mceInit, $field ) {
+
+      // set height of wysiwyg on frontend
+      var minHeight = 200;
+      var mceHeight = $( ed.iframeElement ).contents().find( 'html' ).height() || minHeight;
+
+      // if ( mceHeight < minHeight ) {
+      //   mceHeight = minHeight;
+      // }
+
+      $( ed.iframeElement ).css( 'height', mceHeight );
+    });
+  }
+
+
 })(jQuery); 
 </script>
 <?php
@@ -127,3 +147,5 @@ function myplugin_register_tinymce_javascript( $plugin_array ) {
   $plugin_array['cursive_heading_btn'] = $tinymceJs;
   return $plugin_array;
 }
+
+
