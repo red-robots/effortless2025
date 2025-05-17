@@ -41,9 +41,13 @@ get_header();
   </div>
   <?php } ?>
 
+  <?php  
+  $show_testimonial = ( get_field('hide_testimonial_section') ) ? false : true;
+  $show_subscribe = ( get_field('hide_subscribe_section') ) ? false : true;
 
-  <?php get_template_part('parts/home/testimonials'); ?>
-  <?php get_template_part('parts/home/subscribe'); ?>
+  if($show_testimonial) { get_template_part('parts/home/testimonials'); }
+  if($show_subscribe) { get_template_part('parts/home/subscribe'); }
+  ?>
 </main>
 
 <?php

@@ -1991,8 +1991,8 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .repeatable--image_and_text_column.buttons-align-center p:has(.custom-button-element){display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .repeatable--image_and_text_column.image-position-left .flexwrap{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
 .repeatable--slider_section{margin-top:80px;margin-bottom:80px}
-.repeatable--slider_section.prev-intro_heading_center{margin-top:0}
-.repeatable--slider_section.next-intro_heading_center{margin-bottom:0}
+.repeatable--slider_section[class*=prev-]{margin-top:0}
+.repeatable--slider_section[class*=next-]{margin-bottom:0}
 .repeatable--slider_section .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:unset;-ms-flex-align:unset;align-items:unset}
 .repeatable--slider_section .flexwrap .textCol,.repeatable--slider_section .flexwrap .sliderCol{width:100%;position:relative}
 .repeatable--slider_section .flexwrap .textCol{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}

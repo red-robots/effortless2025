@@ -1953,12 +1953,18 @@ h2:has(.cursiveHeading) {
 .repeatable--slider_section {
   margin-top: 80px;
   margin-bottom: 80px;
-  &.prev-intro_heading_center {
+  &[class*="prev-"] {
     margin-top: 0;
   }
-  &.next-intro_heading_center {
+  &[class*="next-"] {
     margin-bottom: 0;
   }
+  // &.prev-intro_heading_center {
+  //   margin-top: 0;
+  // }
+  // &.next-intro_heading_center {
+  //   margin-bottom: 0;
+  // }
   .flexwrap {
     display: flex;
     flex-wrap: wrap;

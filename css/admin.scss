@@ -192,6 +192,18 @@
   }
 }
 
+[data-name="hide_testimonial_section"] {
+  width: 30%;
+  float: left;
+  clear: none!important;
+}
+[data-name="hide_subscribe_section"] {
+  width: 70%;
+  float: left;
+  clear: none!important;
+}
+
+
 #pageparentdiv.postbox,
 #pageparentdiv.hide-if-js {
   display: block!important;
