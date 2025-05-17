@@ -11,6 +11,28 @@ html, body, *, ::before, ::after {
   margin: 0 0;
 }
 
+@mixin button_style {
+  appearance: none;
+  border-radius: 0;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: $color_secondary;
+  color: #FFF;
+  padding: 10px 30px 12px;
+  box-shadow: none!important;
+  font-family: $font_primary!important;
+  font-size: 16px!important;
+  text-transform: uppercase;
+  transition: all ease .3s;
+  &:hover, &:focus {
+    background-color: $color_brown;
+    color: #FFF;
+  }
+  &:focus {
+    outline: 1px dotted #FFF;
+  }
+}
 .site {
   position: relative;
   overflow: hidden;
@@ -1491,6 +1513,46 @@ body.page-template-page-repeatable {
   .subscribe-container {
     padding-bottom: 80px;
   }
+
+  .site-main {
+    .gform_button, input[type="submit"], button[type="submit"] {
+      @include button_style;
+    }
+
+    .gform_wrapper {
+      input[type=text], input[type=email], input[type=url], input[type=password], input[type=search], input[type=number], input[type=tel], input[type=range], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color], textarea {
+        appearance: none;
+        border: 1px solid rgba($color_brown,75%);
+        border-radius: 0;
+        height: 40px;
+        padding: 5px 8px!important;
+        font-size: 18px;
+        color: #000;
+        transition: all ease .3s;
+        &:focus {
+          outline: 0;
+          border-color: $color_secondary;
+          box-shadow: 0 0 0 .2rem rgba($color_secondary,35%);
+        }
+      }
+      select {
+        height: 40px;
+      }
+      select, textarea {
+        border: 1px solid rgba($color_brown,75%);
+        border-radius: 0;
+        padding: 5px!important;
+        font-size: 18px;
+        color: #000;
+        transition: all ease .3s;
+        &:focus {
+          outline: 0;
+          border-color: $color_secondary;
+          box-shadow: 0 0 0 .2rem rgba($color_secondary,35%);
+        }
+      }
+    }
+  }
 }
 
 h2:has(.cursiveHeading) {
@@ -2452,6 +2514,48 @@ body.page-template:not(.page-template-page-repeatable) {
     padding-bottom: 50px;
   }
 }
+
+//WOOCOMMERCE 
+.repeatable.repeatable--two_column_intro {
+  .textBlock {
+    .product.woocommerce.add_to_cart_inline {
+      border: none!important;
+      padding: 0 0!important;
+    }
+    .woocommerce-product-gallery,
+    .wc-tabs-wrapper,
+    .woocommerce-product-gallery__wrapper {
+      display: none!important;
+    }
+    .summary.entry-summary {
+      width: 100%;
+      p.price {
+        font-size: 1.65rem;
+      }
+      input.qty {
+        appearance: none;
+        border: 1px solid rgba($color_brown,75%);
+        border-radius: 0;
+        height: 38px;
+        padding: 3px 8px 5px!important;
+        font-size: 20px;
+        color: #000;
+        margin-right: 5px;
+        transition: all ease .3s;
+        &:focus {
+          outline: 0;
+          border-color: $color_secondary;
+          box-shadow: 0 0 0 .2rem rgba($color_secondary,35%);
+        }
+      }
+      .product_meta,
+      .product_title.entry-title {
+        display: none!important;
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 782px) {
   body:has(#wpadminbar) {
