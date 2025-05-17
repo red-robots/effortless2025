@@ -17,7 +17,7 @@ html, body, *, ::before, ::after {
   appearance: none;
   border: none;
   border-radius: 0;
-  background-color: $color_secondary;
+  background-color: $color_brown;
   color: #FFF;
   padding: 10px 30px 12px;
   box-shadow: none!important;
@@ -26,11 +26,11 @@ html, body, *, ::before, ::after {
   text-transform: uppercase;
   transition: all ease .3s;
   &:hover, &:focus {
-    background-color: $color_brown;
+    background-color: $color_secondary;
     color: #FFF;
   }
   &:focus {
-    outline: 1px dotted #FFF;
+    outline: 1px dotted $color_secondary;
   }
 }
 .site {
