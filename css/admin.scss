@@ -15,6 +15,11 @@
   }
 }
 
+.acf-field[data-name="hero_type"] {
+  position: absolute!important;
+  width: 40%;
+  top: 0;
+}
 .acf-field[data-name="hero_video_url"],
 .acf-field[data-name="hero_image"] {
   width: 40%;
@@ -29,6 +34,9 @@
       height: auto!important;
     }
   }
+}
+.acf-field[data-name="hero_image"] {
+  margin-top: 80px!important;
 }
 .acf-field[data-name],
 .acf-field[data-name] * {

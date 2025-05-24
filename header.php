@@ -23,6 +23,7 @@
 
 <script src="https://use.typekit.net/vww2unj.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script>var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v});</script>
 <?php $ga = get_field("google_analytics","option");
 if($ga):
     echo $ga;

@@ -7,6 +7,12 @@ if ( ! function_exists( 'acstarter_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
+add_action( 'init', 'acstarter_load_textdomain' );
+function acstarter_load_textdomain() {
+  load_theme_textdomain( 'acstarter', get_template_directory() . '/languages' );
+}
+
 function acstarter_setup() {
   /*
    * Make theme available for translation.
@@ -14,7 +20,7 @@ function acstarter_setup() {
    * If you're building a theme based on ACStarter, use a find and replace
    * to change 'acstarter' to the name of your theme in all the template files.
    */
-  load_theme_textdomain( 'acstarter', get_template_directory() . '/languages' );
+  //load_theme_textdomain( 'acstarter', get_template_directory() . '/languages' );
 
   // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );

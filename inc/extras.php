@@ -77,6 +77,11 @@ function extractYoutubeId($videoURL) {
   return $youtubeId;
 }
 
+function add_query_vars_filter( $vars ) {
+  $vars[] = "pg";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );
 
 function shortenText($string, $limit, $break=".", $pad="...") {
   // return with no change if string is shorter than $limit

@@ -182,4 +182,22 @@ jQuery(document).ready(function ($) {
     }); 
   }
 
+  if( $('body').hasClass('page-template-page-the-dish') ) {
+
+    if( typeof params.q!=='undefined' && params.q ) {
+      var newUrl = window.location.href + '#main';
+      if( !window.location.hash ) {
+        window.location.href = newUrl;
+      }
+    }
+
+    if($('.pagination-dish a').length)  {
+      $('.pagination-dish a').each(function(){
+        var pageHref = $(this).attr('href');
+        $(this).attr('href', pageHref+'#main');
+      });
+    }
+  }
+
+  
 });

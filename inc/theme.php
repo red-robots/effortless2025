@@ -74,7 +74,9 @@ add_action('wp_head', 'mytheme_favicon');
 /*-------------------------------------
 	Adds Options page for ACF.
 ---------------------------------------*/
-if( function_exists('acf_add_options_page') ) {acf_add_options_page();}
+add_action('acf/init', function() {
+  if( function_exists('acf_add_options_page') ) {acf_add_options_page();}
+});
 
 /*-------------------------------------
   Hide Front End Admin Menu Bar

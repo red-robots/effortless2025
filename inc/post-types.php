@@ -228,3 +228,45 @@ function build_taxonomies() {
 		) );
 } // End build taxonomies
 add_action( 'init', 'build_taxonomies', 0 );
+
+
+
+/*
+Taxonomy Custom Column
+manage_edit-$taxonomy_columns filter.
+*/
+add_filter("manage_edit-category_columns", 'theme_columns'); 
+function theme_columns($theme_columns) {
+    $new_columns = array(
+        'cb' => '<input type="checkbox" />',
+        'name' => __('Name'),
+        'tax_image' => __('Image'),
+//      'description' => __('Description'),
+        'slug' => __('Slug'),
+        'posts' => __('Posts')
+        );
+    return $new_columns;
+}
+
+
+add_filter("manage_category_custom_column", 'manage_theme_columns', 10, 3);
+function manage_theme_columns($out, $column_name, $theme_id) {
+    $theme = get_term($theme_id, 'category');
+    switch ($column_name) {
+        case 'tax_image': 
+            $photo = get_field('category_image',$theme); 
+            $out = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;">';
+            if($photo) {
+                $out .= '<span style="display:block;width:100%;height:100%;background:url('.$photo['url'].');background-size:cover;background-position:center"></span>';
+            } else {
+                $out .= '<i class="dashicons dashicons-camera" style="font-size:33px;position:relative;top:8px;left:-6px;opacity:0.3;"></i>';
+            }
+            $out .= '</span>';
+            break;
+ 
+        default:
+            break;
+    }
+    return $out;    
+}
+
