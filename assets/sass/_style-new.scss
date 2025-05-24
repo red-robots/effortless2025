@@ -1933,11 +1933,16 @@ h2:has(.cursiveHeading) {
       background-repeat: no-repeat;
       opacity: 0.8;
     }
-    p:has(.custom-button-element) {
-      display: flex;
-      justify-content: center;
-      margin-top: 0;
-      margin-bottom: 0;
+  }
+  &.center {
+    .intro-wrapper .wrapper {
+      text-align: center;
+      p:has(.custom-button-element) {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
     }
   }
 }
