@@ -1758,8 +1758,9 @@ body{font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.4;color
 body.home #hero .wrapper{max-width:100%;padding-left:0;padding-right:0}
 .introText .wrapper{text-align:center;max-width:1000px;width:100%;margin:0 auto;padding-top:60px;padding-bottom:65px}
 .introText h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(30px,5vw,40px);font-style:italic;line-height:1.3;color:#90b0ac;margin:0}
-.welcomeText{background-color:#f2f2f2}
-.welcomeText .wrapper{padding:60px 20px;max-width:1600px;width:100%;margin:0 auto}
+.welcomeText{background-color:#f2f2f2;position:relative}
+.welcomeText:after{content:"";display:block;width:clamp(350px,400px,30vw);height:100%;position:absolute;right:0;bottom:0;background-image:url("images/eewatermark.png");background-position:bottom right;background-size:60%;background-repeat:no-repeat;opacity:.8}
+.welcomeText .wrapper{padding:60px 20px;max-width:1600px;width:100%;margin:0 auto;position:relative;z-index:10}
 .welcomeText .imageCol{margin:0;width:100%}
 .welcomeText .imageCol img{width:100%;height:auto}
 .welcomeText .textCol{width:100%}
