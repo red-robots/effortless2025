@@ -6,12 +6,17 @@
 jQuery(document).ready(function ($) {
 
   //Sticky Header
-  var stickyOffset = $('.site-header').offset().top;
+  //var stickyOffset = $('.site-header').offset().top;
+  var stickyOffset = $('.site-header').height() + 20;
+  page_scrolled();
   $(window).scroll(function(){
+    page_scrolled();
+  });
+
+  function page_scrolled() {
     var top_offset = ( $('#wpadminbar').length ) ? $('#wpadminbar').height() : 0;
     var sticky = $('.site-header'),
         scroll = $(window).scrollTop();
-
     if (scroll >= stickyOffset) {
       sticky.addClass('fixed');
       if( $('body').hasClass('home') ) {
@@ -29,7 +34,7 @@ jQuery(document).ready(function ($) {
       }
       $('.site-header').css('top','');
     }
-  });
+  }
 
   if( $('.repeatable p').length ) {
     $('.repeatable p').each(function(){
