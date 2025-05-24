@@ -199,5 +199,18 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  
+  $( document ).on( 'updated_wc_div updated_cart_totals', function(e) {
+    var count = 0;
+    if( $('.woocommerce-cart-form input.qty').length ) {
+      $('.woocommerce-cart-form input.qty').each(function(){
+        count += parseInt(this.value);
+      });
+    }
+    if(count>0) {
+      $('.cart-contents .cart-count b').text(count);
+    } else {
+      $('.cart-contents .cart-count').remove();
+    }
+  });
+
 });

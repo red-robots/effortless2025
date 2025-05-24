@@ -185,6 +185,35 @@ body {
         }
         #cart-icon.cart.rc-icon {
           margin-left: 0;
+          &:has(.cart-count) {
+            a {
+              position: relative;
+              .cart-count {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                font-family: 'Arial',sans-serif!important;
+                font-size: 11px;
+                line-height: 1;
+                border: 1px solid $color_brown;
+                background: $color_brown;
+                color: #FFF;
+                min-width: 17px;
+                min-height: 17px;
+                border-radius: 100px;
+                position: absolute;
+                top: -5px;
+                right: -16px;
+                b {
+                  font-weight: normal;
+                  display: block;
+                  width: 100%;
+                  text-align: center;
+                }
+              }
+            }
+          }
         }
       }
     }

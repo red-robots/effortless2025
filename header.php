@@ -82,10 +82,13 @@ endif;?>
           </a>
           <?php }?>
 
+          <?php $cartCount = WC()->cart->get_cart_contents_count(); ?>
           <div id="cart-icon" class="cart rc-icon">
-            <a href="<?php echo wc_get_cart_url();?>">
+            <a href="<?php echo wc_get_cart_url();?>" class="cart-contents">
               <i class="fa fa-shopping-cart"></i>
-              <div class="num"></div><!--.num-->
+              <?php if ($cartCount>0) { ?>
+              <span class="cart-count"><b><?php echo $cartCount ?></b></span><!--.num-->
+              <?php } ?>
             </a>
           </div><!--.cart#cart-icon-->
         </div>
