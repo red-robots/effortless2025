@@ -1988,6 +1988,10 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .repeatable--fullwidth_textcontent.has-graphic-background.next-fullwidth_textcontent{margin-bottom:0}
 .repeatable--fullwidth_textcontent.has-graphic-background:after{content:"";display:block;width:400px;height:100%;position:absolute;right:0;bottom:0;background-image:url("images/eewatermark.png");background-position:bottom right;background-size:60%;background-repeat:no-repeat;opacity:.8}
 .repeatable--fullwidth_textcontent.has-graphic-background p:has(.custom-button-element){display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-top:0;margin-bottom:0}
+.repeatable--image_and_text_column .product.woocommerce.add_to_cart_inline{border:none !important;padding:0}
+.repeatable--image_and_text_column .product.woocommerce.add_to_cart_inline .add_to_cart_button{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;appearance:none;border:0;border-radius:0;background-color:#8a7e78;color:#fff;padding:10px 30px 12px;-webkit-box-shadow:none !important;box-shadow:none !important;font-family:"hypatia-sans-pro",sans-serif !important;font-size:16px !important;text-transform:uppercase;-webkit-transition:all ease .3s;transition:all ease .3s}
+.repeatable--image_and_text_column .product.woocommerce.add_to_cart_inline .add_to_cart_button:hover,.repeatable--image_and_text_column .product.woocommerce.add_to_cart_inline .add_to_cart_button:focus{background-color:#90b0ac;color:#fff}
+.repeatable--image_and_text_column .product.woocommerce.add_to_cart_inline .add_to_cart_button:focus{outline:1px dotted #90b0ac}
 .repeatable--image_and_text_column.next-image_and_text_column{margin-bottom:70px}
 .repeatable--image_and_text_column .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative}
 .repeatable--image_and_text_column .flexwrap .imageCol{width:100%;position:relative}
@@ -1997,6 +2001,7 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .repeatable--image_and_text_column .flexwrap .textCol h2{font-family:"hypatia-sans-pro",sans-serif;font-size:35px;font-weight:400;line-height:1.4;text-transform:uppercase;color:#90b0ac;margin:0;text-align:center;margin:0 0 20px}
 .repeatable--image_and_text_column .flexwrap:has(.imageCol):has(.textCol) .imageCol,.repeatable--image_and_text_column .flexwrap:has(.imageCol):has(.textCol) .textCol{width:100%}
 .repeatable--image_and_text_column.buttons-align-center p:has(.custom-button-element){display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.repeatable--image_and_text_column.buttons-align-center .product.woocommerce.add_to_cart_inline{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .repeatable--image_and_text_column.image-position-left .flexwrap{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
 .repeatable--slider_section{margin-top:80px;margin-bottom:80px}
 .repeatable--slider_section[class*=prev-]{margin-top:0}
@@ -2045,16 +2050,18 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 body.page-template:not(.page-template-page-repeatable) #content.wrapper{padding-bottom:50px}
 .repeatable.repeatable--two_column_intro .textBlock .product.woocommerce.add_to_cart_inline{border:none !important;padding:0 0 !important}
 .repeatable.repeatable--two_column_intro .textBlock .woocommerce-product-gallery,.repeatable.repeatable--two_column_intro .textBlock .wc-tabs-wrapper,.repeatable.repeatable--two_column_intro .textBlock .woocommerce-product-gallery__wrapper{display:none !important}
-.repeatable.repeatable--two_column_intro .textBlock .summary.entry-summary{width:100%}
+.repeatable.repeatable--two_column_intro .textBlock .summary.entry-summary{width:100%;margin-bottom:0 !important}
+.repeatable.repeatable--two_column_intro .textBlock .summary.entry-summary form.cart{margin-bottom:0 !important}
 .repeatable.repeatable--two_column_intro .textBlock .summary.entry-summary p.price{font-size:1.65rem}
 .repeatable.repeatable--two_column_intro .textBlock .summary.entry-summary input.qty{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:1px solid rgba(138,126,120,.75);border-radius:0;height:38px;padding:3px 8px 5px !important;font-size:20px;color:#000;margin-right:5px;-webkit-transition:all ease .3s;transition:all ease .3s}
 .repeatable.repeatable--two_column_intro .textBlock .summary.entry-summary input.qty:focus{outline:0;border-color:#90b0ac;-webkit-box-shadow:0 0 0 .2rem rgba(144,176,172,.35);box-shadow:0 0 0 .2rem rgba(144,176,172,.35)}
 .repeatable.repeatable--two_column_intro .textBlock .summary.entry-summary .product_meta,.repeatable.repeatable--two_column_intro .textBlock .summary.entry-summary .product_title.entry-title{display:none !important}
 .the-dish-content .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative}
-.the-dish-content .titleSection{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:30px 0}
+.the-dish-content .titleSection{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:30px 0;margin-bottom:50px}
 .the-dish-content .titleSection .titleDiv{width:100%;text-align:center}
 .the-dish-content .titleSection .titleDiv h2{font-family:"hypatia-sans-pro",sans-serif !important;font-size:30px;font-weight:500;line-height:1.2;text-transform:uppercase;color:#90b0ac !important}
 .the-dish-content .titleSection .searchBlock{width:30%;position:absolute;top:0;right:0}
+.the-dish-content .titleSection:has(.titleDiv){margin-bottom:0}
 .the-dish-content .searchBlock ::-webkit-input-placeholder{font-family:"hypatia-sans-pro",sans-serif !important;font-size:18px;letter-spacing:.03em;text-transform:uppercase;color:rgba(138,126,120,.8)}
 .the-dish-content .searchBlock ::-moz-placeholder{font-family:"hypatia-sans-pro",sans-serif !important;font-size:18px;letter-spacing:.03em;text-transform:uppercase;color:rgba(138,126,120,.8)}
 .the-dish-content .searchBlock :-ms-input-placeholder{font-family:"hypatia-sans-pro",sans-serif !important;font-size:18px;letter-spacing:.03em;text-transform:uppercase;color:rgba(138,126,120,.8)}
@@ -2304,6 +2311,7 @@ body.page-template:not(.page-template-page-repeatable) #content.wrapper{padding-
 .repeatable--image_and_text_column .flexwrap .textCol{padding-left:50px;padding-right:50px}
 .repeatable--image_and_text_column .flexwrap:has(.imageCol):has(.textCol) .imageCol,.repeatable--image_and_text_column .flexwrap:has(.imageCol):has(.textCol) .textCol{width:50%}
 .repeatable--image_and_text_column.buttons-align-right p:has(.custom-button-element){display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+.repeatable--image_and_text_column.buttons-align-right .product.woocommerce.add_to_cart_inline{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
 .repeatable--image_and_text_column.image-position-right .flexwrap .imageCol{left:unset;right:0}
 .repeatable--image_and_text_column.image-position-left .flexwrap .imageCol{left:0;right:unset}
 .repeatable--slider_section .flexwrap .textCol .text{padding:50px}
