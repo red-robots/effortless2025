@@ -72,4 +72,38 @@ if($hero_type=='image') {
     </div>
   </section>
   <?php } ?>
+<?php } else if( $hero_type=='slider' ) { ?>
+  <?php $sliderImages = get_field('hero_slider'); ?>
+  <?php if ($sliderImages) { ?>
+  <section id="hero" class="hero-slider">
+    <div class="wrapper">
+      <div class="swiper-container section-slideshow">
+        <div class="swiper-wrapper">
+          <?php foreach ($sliderImages as $s) { 
+            $slideImage = $s['slideImage'];
+            $slideText = $s['slideText'];
+            //$slideTitle = $s['slideTitle'];
+            // $slideButton = $s['slideButton'];
+            // $btnName = (isset($slideButton['title']) && $slideButton['title']) ? $slideButton['title'] : '';
+            // $btnLink = (isset($slideButton['url']) && $slideButton['url']) ? $slideButton['url'] : '';
+            // $btnTarget = (isset($slideButton['target']) && $slideButton['target']) ? $slideButton['target'] : '';
+            if($slideImage) { ?>
+            <div class="swiper-slide">
+              <?php if ($slideText) { ?>
+              <div class="slideCaption">
+                <div class="text"><?php echo $slideText ?></div>
+              </div>
+              <?php } ?>
+              <div class="slideImage" style="background-image:url('<?php echo $slideImage['url'] ?>')"></div>
+            </div>
+            <?php } ?>
+          <?php } ?>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+  <?php } ?>
 <?php } ?>

@@ -20,6 +20,7 @@
   position: absolute !important;
   width: 40%;
   top: 0;
+  z-index: 100;
 }
 
 .acf-field[data-name=hero_video_url],
@@ -44,8 +45,13 @@
   height: auto !important;
 }
 
+.acf-field[data-name=hero_video_url],
 .acf-field[data-name=hero_image] {
   margin-top: 80px !important;
+}
+
+.acf-field[data-name=hero_slider] {
+  padding-top: 95px !important;
 }
 
 .acf-field[data-name],

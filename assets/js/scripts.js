@@ -121,7 +121,7 @@ jQuery(document).ready(function ($) {
 
       /* "slide", "fade", "cube", "coverflow" or "flip" */
       loop: true,
-      noSwiping: true,
+      // noSwiping: true,
       simulateTouch: true,
       speed: 1000,
       autoplay: {
