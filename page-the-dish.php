@@ -93,17 +93,19 @@ $has_filtering = ($filter_term_id || $filter_by_search) ? true : false;
   <?php } ?>
 
   <?php  
-  $perpage = ($has_filtering) ? 10 : 2;
+  //$perpage = ($has_filtering) ? 10 : 2;
+  $perpage = 10;
   $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
   $args = array(
     'posts_per_page'   => $perpage,
+    'paged'            => $paged,
     'orderby'          => 'date',
     'order'            => 'DESC',
     'post_type'        => 'post',
     'post_status'      => 'publish'
   );
   if($filter_term_id) {
-    $args['paged'] = $paged;
+    // $args['paged'] = $paged;
     $args['tax_query'] = array(
       array(
         'taxonomy' => $taxonomy,
@@ -159,7 +161,7 @@ $has_filtering = ($filter_term_id || $filter_by_search) ? true : false;
   </section>
 
   <?php
-  if($filter_term_id) {
+  //if($filter_term_id) {
     $total_pages = $news->max_num_pages;
     if ($total_pages > 1){ ?>
     <div id="pagination" class="pagination-wrapper pagination-dish">
@@ -179,7 +181,7 @@ $has_filtering = ($filter_term_id || $filter_by_search) ? true : false;
       </div>
     </div>
     <?php }  
-    } ?>
+    //} ?>
   <?php } ?>
 
 </main>

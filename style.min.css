@@ -2125,7 +2125,7 @@ body.page-template:not(.page-template-page-repeatable) #content.wrapper{padding-
 .recentPostsContainer .post .inner{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative}
 .recentPostsContainer .post .imageCol,.recentPostsContainer .post .textCol{width:100%}
 .recentPostsContainer .post .imageCol{margin-bottom:30px}
-.recentPostsContainer .post .imageCol figure{margin:0}
+.recentPostsContainer .post .imageCol figure{width:100%;margin:0}
 .recentPostsContainer .post .imageCol img{width:100%;height:auto}
 .recentPostsContainer .post .textCol{font-family:"hypatia-sans-pro",sans-serif}
 .recentPostsContainer .post .textCol .wrap{width:100%}
