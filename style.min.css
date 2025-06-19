@@ -2309,7 +2309,7 @@ body.page-template:not(.page-template-page-repeatable) #content.wrapper{padding-
 #hero .hero-content:has(.videoWrapper){height:70vh}
 #hero .videoWrapper{-webkit-transform:scale(1.2);transform:scale(1.2)}
 .welcomeText{padding-left:0}
-.welcomeText .wrapper{padding-left:40px;padding-right:40px}
+.welcomeText .wrapper{padding-left:50px;padding-right:50px}
 .welcomeText .imageCol{width:25%}
 .welcomeText .textCol{width:75%;padding-left:3vw}
 .featuredArticles .wrapper{padding-left:50px;padding-right:50px}
