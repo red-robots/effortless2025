@@ -206,6 +206,16 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'sources-resources-sub' ),
 			'_builtin' => true
 		) );
+    register_taxonomy( 'sources-resources-category', array('sources-resources'),
+    array(
+      'hierarchical' => true, // true = acts like categories false = acts like tags
+      'label' => 'SR Categories',
+      'query_var' => true,
+      'show_admin_column' => true,
+      'public' => true,
+      'rewrite' => array( 'slug' => 'sources-resources-categories' ),
+      '_builtin' => true
+    ) );
     register_taxonomy( 'sub-3', array('tips-quips'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
