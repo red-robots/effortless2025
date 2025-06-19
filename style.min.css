@@ -1705,11 +1705,11 @@ html,body,*,::before,::after{-webkit-box-sizing:border-box;box-sizing:border-box
 .wrapper{max-width:1600px;width:100%;margin:0 auto;padding-left:20px;padding-right:20px}
 .h2{font-family:"hypatia-sans-pro",sans-serif;font-size:35px;font-weight:400;line-height:1.4;text-transform:uppercase;color:#90b0ac;margin:0}
 #wpadminbar{position:fixed !important;top:0;left:0}
-body{font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.4;color:#776b65}
+body{font-family:"hypatia-sans-pro",sans-serif;font-weight:300;font-size:20px;line-height:1.4;color:#776b65}
 .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .button,.button-element.button{display:inline-block;text-decoration:none;background-color:#776b65;padding:9px 20px 10px;color:#fff;text-decoration:none;font-family:"hypatia-sans-pro",sans-serif !important;font-size:16px;line-height:1.2;letter-spacing:.04em;text-transform:uppercase;-webkit-transition:all ease .3s;transition:all ease .3s}
 .button:hover,.button:focus,.button-element.button:hover,.button-element.button:focus{background-color:#90b0ac;color:#fff}
-#masthead.site-header.site-header-new{width:100%;background:#fff;-webkit-transition:all ease .3s;transition:all ease .3s;z-index:9999}
+#masthead.site-header.site-header-new{width:100%;background:#fff;-webkit-transition:all ease .3s;transition:all ease .3s;z-index:9999;font-weight:normal}
 #masthead.site-header.site-header-new #site-navigation.main-navigation ul.menu a{display:inline-block;-webkit-transition:all ease .3s;transition:all ease .3s;font-family:"hypatia-sans-pro",sans-serif !important}
 #masthead.site-header.site-header-new #site-navigation.main-navigation ul.menu>li>a:hover,#masthead.site-header.site-header-new #site-navigation.main-navigation ul.menu>li>a:focus{color:#90b0ac}
 #masthead.site-header.site-header-new .row-1{background-color:#fff;border-bottom:1px solid #eceded;opacity:1;-webkit-transition:all ease .3s;transition:all ease .3s}
@@ -1896,7 +1896,7 @@ body.home #hero .wrapper{max-width:100%}
 .images-4-columns .imageCol .postLink:hover,.images-4-columns .imageCol .postLink:focus{background:#8a7e78}
 .images-4-columns .imageCol .postLink:hover figcaption,.images-4-columns .imageCol .postLink:focus figcaption{color:#fff}
 .images-4-columns .imageCol .postLink:hover figure img,.images-4-columns .imageCol .postLink:focus figure img{-webkit-transform:scale(1.07);transform:scale(1.07)}
-.site-footer.site-footer-new{overflow:hidden;padding-top:30px;padding-bottom:30px;font-size:17px}
+.site-footer.site-footer-new{overflow:hidden;padding-top:30px;padding-bottom:30px;font-size:17px;font-weight:normal}
 .site-footer.site-footer-new a{display:inline-block;-webkit-transition:all ease .3s;transition:all ease .3s;color:#8a7e78}
 .site-footer.site-footer-new a:hover,.site-footer.site-footer-new a:focus{color:#90b0ac}
 .site-footer.site-footer-new ul.menu{margin:0;padding:0;list-style:none}
