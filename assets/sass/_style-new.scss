@@ -240,9 +240,9 @@ body {
     .row-2>.wrapper .logo {
       width: 320px;
     }
-    .row-2>.wrapper {
-      padding: 20px 30px;
-    }
+    // .row-2>.wrapper {
+    //   padding: 20px 30px;
+    // }
   }
 
   .logoContainer {
@@ -266,7 +266,11 @@ body {
         padding-right: 20px;
         max-width: 1600px;
         width: 100%;
-        @media screen and (min-width: 1380px) {
+        // @media screen and (min-width: 1380px) {
+        //   padding-left: 50px;
+        //   padding-right: 50px;
+        // }
+        @include tab {
           padding-left: 50px;
           padding-right: 50px;
         }
