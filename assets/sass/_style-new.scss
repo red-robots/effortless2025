@@ -130,8 +130,8 @@ body {
       padding-left: 20px;
       padding-right: 20px;
       @include tab {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
       }
 
       #site-navigation.main-navigation {
@@ -600,8 +600,8 @@ body {
 }
 body.home #hero .wrapper {
   max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+  // padding-left: 0;
+  // padding-right: 0;
 }
 
 .introText {

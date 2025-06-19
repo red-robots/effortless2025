@@ -1773,7 +1773,7 @@ body{font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.4;color
 .hero-slider .section-slideshow .swiper-pagination-bullet{width:10px;height:10px;margin:0 6px;opacity:1 !important;border:1px solid rgba(138,126,120,.75);background-color:#fff;-webkit-transition:all ease .3s;transition:all ease .3s}
 .hero-slider .section-slideshow .swiper-pagination-bullet.swiper-pagination-bullet-active{border-color:#8a7e78;background-color:#8a7e78;-webkit-transform:scale(1.2);transform:scale(1.2)}
 .hero-slider .section-slideshow .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover{-webkit-transform:scale(1.2);transform:scale(1.2)}
-body.home #hero .wrapper{max-width:100%;padding-left:0;padding-right:0}
+body.home #hero .wrapper{max-width:100%}
 .introText .wrapper{text-align:center;max-width:1000px;width:100%;margin:0 auto;padding-top:60px;padding-bottom:65px}
 .introText h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(30px,5vw,40px);font-style:italic;line-height:1.3;color:#90b0ac;margin:0}
 .welcomeText{background-color:#f2f2f2;position:relative}
@@ -2304,7 +2304,7 @@ body.page-template:not(.page-template-page-repeatable) #content.wrapper{padding-
 .template-generic-single aside.column-3{width:22%;padding:0}
 .template-members-landing>.row-3 .item{width:23%;margin:1%}
 }@media(min-width:1080px){.wrapper{padding-left:50px;padding-right:50px}
-#masthead.site-header.site-header-new .row-1 .wrapper{padding-left:100px;padding-right:100px}
+#masthead.site-header.site-header-new .row-1 .wrapper{padding-left:50px;padding-right:50px}
 #masthead.site-header.site-header-new.is--home.fixed .logoContainer .wrapper,#masthead.site-header.site-header-new.is--subpage .logoContainer .wrapper{padding-left:50px;padding-right:50px}
 #hero .hero-content:has(.videoWrapper){height:70vh}
 #hero .videoWrapper{-webkit-transform:scale(1.2);transform:scale(1.2)}
