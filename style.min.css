@@ -1950,6 +1950,24 @@ body.page-template-page-the-dish .site-main .gform_wrapper input[type=text]:focu
 body.page-template-page-the-dish .site-main .gform_wrapper select,body.page-template-page-repeatable .site-main .gform_wrapper select{height:40px}
 body.page-template-page-the-dish .site-main .gform_wrapper select,body.page-template-page-the-dish .site-main .gform_wrapper textarea,body.page-template-page-repeatable .site-main .gform_wrapper select,body.page-template-page-repeatable .site-main .gform_wrapper textarea{border:1px solid rgba(138,126,120,.75);border-radius:0;padding:5px !important;font-size:18px;color:#000;-webkit-transition:all ease .3s;transition:all ease .3s}
 body.page-template-page-the-dish .site-main .gform_wrapper select:focus,body.page-template-page-the-dish .site-main .gform_wrapper textarea:focus,body.page-template-page-repeatable .site-main .gform_wrapper select:focus,body.page-template-page-repeatable .site-main .gform_wrapper textarea:focus{outline:0;border-color:#90b0ac;-webkit-box-shadow:0 0 0 .2rem rgba(144,176,172,.35);box-shadow:0 0 0 .2rem rgba(144,176,172,.35)}
+body.single #hero.hero-image:has(.heroText) .hero-content:after{display:none}
+body.single #hero.hero-image:has(.heroText) .heroText{max-width:100%;width:100%;margin:0 0 !important;padding:20px 30px;background:rgba(144,176,172,.9)}
+body.single #hero.hero-image:has(.heroText) .heroText h1,body.single #hero.hero-image:has(.heroText) .heroText h2{font-family:"Cormorant Garamond",serif !important;font-size:clamp(2rem,5vw,50px);font-weight:400;font-style:italic;line-height:1.2;margin:0;color:#fff}
+body.single #main #hero{margin-bottom:50px}
+body.single #main #hero .wrapper{max-width:100%;width:100%;padding:0}
+body.single #main .template-single{width:100%}
+body.single #main .template-single .sidewrap{padding:20px 15px}
+body.single #main .template-single .sidewrap .search-form{margin:0;width:100%;position:relative}
+body.single #main .template-single .sidewrap .search-form *{-webkit-box-sizing:border-box;box-sizing:border-box}
+body.single #main .template-single .sidewrap .search-form label{display:block;width:100%;margin:0}
+body.single #main .template-single .sidewrap .search-form .search-field{width:100%;border:1px solid #fff;border-radius:0;height:35px;padding:5px 65px 5px 15px;font-size:16px;color:#000;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all ease .3s;transition:all ease .3s}
+body.single #main .template-single .sidewrap .search-form .search-field:focus{outline:0;border-color:#6aa09d;-webkit-box-shadow:0 0 0 .15rem #a6c0bd;box-shadow:0 0 0 .15rem #a6c0bd}
+body.single #main .template-single .sidewrap .search-form .search-submit{display:inline-block;position:absolute;top:0;right:0;z-index:5;border:0;height:100%;width:60px;font-size:15px;padding:0;background:#86796b;-webkit-box-shadow:none;box-shadow:none;border-radius:0;text-shadow:none;color:#fff;-webkit-transition:all ease .3s;transition:all ease .3s}
+body.single #main .template-single .sidewrap .search-form .search-submit:hover,body.single #main .template-single .sidewrap .search-form .search-submit:focus{background:#b3a08c}
+body.single #main .template-single .column-2 #mc_embed_signup .mc-field-group input{width:100%;border:1px solid #fff;border-radius:0;height:35px;padding:5px 65px 5px 10px;font-size:16px;color:#000;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all ease .3s;transition:all ease .3s}
+body.single #main .template-single .column-2 #mc_embed_signup .mc-field-group input:focus{outline:0;border-color:#6aa09d;-webkit-box-shadow:0 0 0 .15rem #a6c0bd;box-shadow:0 0 0 .15rem #a6c0bd}
+body.single #main .template-single .column-2 #mc_embed_signup [type=submit]{display:inline-block;border:0;height:100%;width:60px;font-size:15px;padding:0;background:#86796b !important;-webkit-box-shadow:none;box-shadow:none;border-radius:0;text-shadow:none;color:#fff !important;-webkit-transition:all ease .3s;transition:all ease .3s;margin-top:0 !important}
+body.single #main .template-single .column-2 #mc_embed_signup [type=submit]:hover,body.single #main .template-single .column-2 #mc_embed_signup [type=submit]:focus{background:#b3a08c !important}
 h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Garamond",serif !important;font-style:italic}
 .repeatable{position:relative;overflow:hidden}
 .repeatable p.empty{display:none !important}
