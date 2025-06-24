@@ -224,4 +224,14 @@
   display: block !important;
 }
 
+/*==== HOME SECTIONS ORDER ===*/
+.acf-field-repeater[data-name=home_section_order] .acf-actions,
+.acf-field-repeater[data-name=home_section_order] .acf-table tbody tr td:last-child,
+.acf-field-repeater[data-name=home_section_order] .acf-table thead th:last-child {
+  display: none;
+}
+.acf-field-repeater[data-name=home_section_order] .acf-input-wrap input {
+  pointer-events: none;
+}
+
 /*# sourceMappingURL=admin.css.map */
