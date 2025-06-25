@@ -1872,6 +1872,13 @@ h2:has(.cursiveHeading) {
   font-style: italic;
 }
 
+#main {
+  min-height: 40em;
+  .full-width-wrapper {
+    width: 100%;
+  }
+}
+
 .repeatable {
   position: relative;
   overflow: hidden;
@@ -2170,6 +2177,24 @@ h2:has(.cursiveHeading) {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+.repeatable--fullwidth_image {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  &[class*="prev-"] {
+    margin-top: 0;
+  }
+  &[class*="next-"] {
+    margin-bottom: 0;
+  }
+  figure {
+    margin: 0 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 

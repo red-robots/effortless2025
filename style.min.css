@@ -1970,6 +1970,8 @@ body.single #main .template-single .column-2 #mc_embed_signup .mc-field-group in
 body.single #main .template-single .column-2 #mc_embed_signup [type=submit]{display:inline-block;border:0;height:100%;width:60px;font-size:15px;padding:0;background:#86796b !important;-webkit-box-shadow:none;box-shadow:none;border-radius:0;text-shadow:none;color:#fff !important;-webkit-transition:all ease .3s;transition:all ease .3s;margin-top:0 !important}
 body.single #main .template-single .column-2 #mc_embed_signup [type=submit]:hover,body.single #main .template-single .column-2 #mc_embed_signup [type=submit]:focus{background:#b3a08c !important}
 h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Garamond",serif !important;font-style:italic}
+#main{min-height:40em}
+#main .full-width-wrapper{width:100%}
 .repeatable{position:relative;overflow:hidden}
 .repeatable p.empty{display:none !important}
 .repeatable a{display:inline-block;-webkit-transition:all ease .3s;transition:all ease .3s;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;color:#90b0ac}
@@ -2020,6 +2022,11 @@ h2:has(.cursiveHeading){text-transform:none !important;font-family:"Cormorant Ga
 .repeatable--fullwidth_video .video-content{height:380px;position:relative;background-color:#000}
 .repeatable--fullwidth_video .videoWrapper{position:absolute;top:0;left:0;width:100%;height:100%}
 .repeatable--fullwidth_video .videoWrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+.repeatable--fullwidth_image{margin-top:70px;margin-bottom:70px}
+.repeatable--fullwidth_image[class*=prev-]{margin-top:0}
+.repeatable--fullwidth_image[class*=next-]{margin-bottom:0}
+.repeatable--fullwidth_image figure{margin:0}
+.repeatable--fullwidth_image figure img{width:100%;height:auto}
 .repeatable--fullwidth_textcontent{position:relative}
 .repeatable--fullwidth_textcontent .intro-wrapper{padding:80px 0;position:relative;z-index:10;text-align:center}
 .repeatable--fullwidth_textcontent.left .intro-wrapper{text-align:left}

@@ -111,133 +111,167 @@ function js_custom_init() {
 
 
 /* Custom Taxonomies     */
+add_action( 'init', 'build_taxonomies', 0 ); 
 function build_taxonomies() {
-// custom tax
-    register_taxonomy( 'from', array('menu'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'From',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'menu-from' ),
-			'_builtin' => true
-    ) );
-    register_taxonomy( 'cpt-tag',array('menu','recipe','sources-resources','tips-quips','style-points'), 
-    array( 
-      'hierarchical' => false, // true = acts like categories false = acts like tags
-      'label' => 'Tags',
-      'query_var' => true,
-      'show_admin_column' => true,
-      'public' => true,
-      'rewrite' => true,
-      '_builtin' => true
-    ) );
-    register_taxonomy( 'from-5', array('recipe'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'From',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'recipe-from' ),
-			'_builtin' => true
-    ) );
-    
-    register_taxonomy( 'from-2', array('sources-resources'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'From',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'sources-resources-from' ),
-			'_builtin' => true
-    ) );
-    
-    register_taxonomy( 'from-3', array('tips-quips'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'From',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'tips-quips-from' ),
-			'_builtin' => true
-    ) );
-    
-    register_taxonomy( 'from-4', array('style-points'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'From',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'style-points-from' ),
-			'_builtin' => true
-    ) );
-    register_taxonomy( 'sub', array('menu'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'Sub',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'menu-sub' ),
-			'_builtin' => true
-		) );
-    register_taxonomy( 'sub-5', array('recipe'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'Sub',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'recipe-sub' ),
-			'_builtin' => true
-		) );
-    register_taxonomy( 'sub-2', array('sources-resources'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'Sub',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'sources-resources-sub' ),
-			'_builtin' => true
-		) );
-    register_taxonomy( 'sources-resources-category', array('sources-resources'),
+  $post_types = array(
     array(
-      'hierarchical' => true, // true = acts like categories false = acts like tags
-      'label' => 'SR Categories',
-      'query_var' => true,
-      'show_admin_column' => true,
-      'public' => true,
-      'rewrite' => array( 'slug' => 'sources-resources-categories' ),
-      '_builtin' => true
-    ) );
-    register_taxonomy( 'sub-3', array('tips-quips'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'Sub',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'tips-quips-sub' ),
-			'_builtin' => true
-		) );
-    register_taxonomy( 'sub-4', array('style-points'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'Sub',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'style-points-sub' ),
-			'_builtin' => true
-		) );
-} // End build taxonomies
-add_action( 'init', 'build_taxonomies', 0 );
+      'post_type' => array('menu'),
+      'menu_name' => 'From',
+      'plural'    => 'From',
+      'single'    => 'From',
+      'taxonomy'  => 'from',
+      'rewrite'   => 'menu-from'
+    ),
+    array(
+      'post_type' => array('menu','recipe','sources-resources','tips-quips','style-points'),
+      'menu_name' => 'Tags',
+      'plural'    => 'Tags',
+      'single'    => 'Tag',
+      'taxonomy'  => 'cpt-tag',
+      'rewrite'   => true,
+      'hierarchical'  => false, /* true = acts like categories | false = acts like tags */
+    ),
+    array(
+      'post_type' => array('recipe'),
+      'menu_name' => 'From',
+      'plural'    => 'From',
+      'single'    => 'From',
+      'taxonomy'  => 'from-5',
+      'rewrite'   => 'recipe-from',
+    ),
+    array(
+      'post_type' => array('sources-resources'),
+      'menu_name' => 'From',
+      'plural'    => 'From',
+      'single'    => 'From',
+      'taxonomy'  => 'from-2',
+      'rewrite'   => 'sources-resources-from',
+    ),
+    array(
+      'post_type' => array('tips-quips'),
+      'menu_name' => 'From',
+      'plural'    => 'From',
+      'single'    => 'From',
+      'taxonomy'  => 'from-3',
+      'rewrite'   => 'tips-quips-from',
+    ),
+    array(
+      'post_type' => array('style-points'),
+      'menu_name' => 'From',
+      'plural'    => 'From',
+      'single'    => 'From',
+      'taxonomy'  => 'from-4',
+      'rewrite'   => 'style-points-from',
+    ),
+    array(
+      'post_type' => array('menu'),
+      'menu_name' => 'Sub',
+      'plural'    => 'Sub',
+      'single'    => 'Sub',
+      'taxonomy'  => 'sub',
+      'rewrite'   => 'menu-sub',
+    ),
+    array(
+      'post_type' => array('recipe'),
+      'menu_name' => 'Sub',
+      'plural'    => 'Sub',
+      'single'    => 'Sub',
+      'taxonomy'  => 'sub-5',
+      'rewrite'   => 'recipe-sub',
+    ),
+    array(
+      'post_type' => array('sources-resources'),
+      'menu_name' => 'Sub',
+      'plural'    => 'Sub',
+      'single'    => 'Sub',
+      'taxonomy'  => 'sub-2',
+      'rewrite'   => 'sources-resources-sub',
+    ),
+    array(
+      'post_type' => array('sources-resources'),
+      'menu_name' => 'SR Categories',
+      'plural'    => 'SR Categories',
+      'single'    => 'SR Category',
+      'taxonomy'  => 'sources-resources-category',
+      'rewrite'   => 'sources-resources-categories',
+    ),
+    array(
+      'post_type' => array('tips-quips'),
+      'menu_name' => 'Sub',
+      'plural'    => 'Sub',
+      'single'    => 'Sub',
+      'taxonomy'  => 'sub-3',
+      'rewrite'   => 'tips-quips-sub',
+    ),
+    array(
+      'post_type' => array('style-points'),
+      'menu_name' => 'Sub',
+      'plural'    => 'Sub',
+      'single'    => 'Sub',
+      'taxonomy'  => 'sub-4',
+      'rewrite'   => 'style-points-sub',
+    )
+  );
+
+  if($post_types) {
+    foreach($post_types as $p) {
+      $p_type = ( isset($p['post_type']) && $p['post_type'] ) ? $p['post_type'] : ""; 
+      $single_name = ( isset($p['single']) && $p['single'] ) ? $p['single'] : "Custom Post"; 
+      $plural_name = ( isset($p['plural']) && $p['plural'] ) ? $p['plural'] : "Custom Post"; 
+      $menu_name = ( isset($p['menu_name']) && $p['menu_name'] ) ? $p['menu_name'] : $p['plural'];
+      $taxonomy = ( isset($p['taxonomy']) && $p['taxonomy'] ) ? $p['taxonomy'] : "";
+      $rewrite = ( isset($p['rewrite']) && $p['rewrite'] ) ? $p['rewrite'] : $taxonomy;
+      $query_var = ( isset($p['query_var']) ) ? $p['query_var'] : true;
+      $hierarchical = ( isset($p['hierarchical']) ) ? $p['hierarchical'] : true;
+      $show_admin_column = ( isset($p['show_admin_column']) ) ? $p['show_admin_column'] : true;
+      $default_term = ( isset($p['default_term']) ) ? $p['default_term'] : '';
+
+      $labels = array(
+        'name' => _x( $menu_name, 'taxonomy general name' ),
+        'singular_name' => _x( $single_name, 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search ' . $plural_name ),
+        'popular_items' => __( 'Popular ' . $plural_name ),
+        'all_items' => __( 'All ' . $plural_name ),
+        'parent_item' => __( 'Parent ' .  $single_name),
+        'parent_item_colon' => __( 'Parent ' . $single_name . ':' ),
+        'edit_item' => __( 'Edit ' . $single_name ),
+        'update_item' => __( 'Update ' . $single_name ),
+        'add_new_item' => __( 'Add New ' . $single_name ),
+        'new_item_name' => __( 'New ' . $single_name ),
+      );
+
+      if($default_term) {
+
+        register_taxonomy($taxonomy, $p_type, array(
+          'hierarchical' => $hierarchical,
+          'labels' => $labels,
+          'show_admin_column' => $show_admin_column,
+          'query_var' => $query_var,
+          'show_ui' => true,
+          'show_in_rest' => true,
+          'public' => true,
+          '_builtin' => true,
+          'default_term' => array( 'name' => $default_term['name'], 'slug' => $default_term['slug'] ),
+          'rewrite' => array( 'slug' => $rewrite ),
+        ));
+
+      } else {
+        register_taxonomy($taxonomy, $p_type, array(
+          'hierarchical' => true,
+          'labels' => $labels,
+          'show_admin_column' => $show_admin_column,
+          'query_var' => $query_var,
+          'show_ui' => true,
+          'show_in_rest' => true,
+          'public' => true,
+          '_builtin' => true,
+          'rewrite' => array( 'slug' => $rewrite ),
+        ));
+      }
+
+    }
+  }
+}
 
 
 
@@ -245,38 +279,102 @@ add_action( 'init', 'build_taxonomies', 0 );
 Taxonomy Custom Column
 manage_edit-$taxonomy_columns filter.
 */
-add_filter("manage_edit-category_columns", 'theme_columns'); 
-function theme_columns($theme_columns) {
-    $new_columns = array(
-        'cb' => '<input type="checkbox" />',
-        'name' => __('Name'),
-        'tax_image' => __('Image'),
-//      'description' => __('Description'),
-        'slug' => __('Slug'),
-        'posts' => __('Posts')
-        );
-    return $new_columns;
+
+add_action('init', 'category_data_init');
+function category_data_init() {
+  global $category_args;
+  $category_args[] = array(
+    'taxonomy'=>'category',
+    'columns'=> array(
+      'cb' => '<input type="checkbox" />',
+      'name' => __('Name'),
+      'tax_image' => __('Image'),
+      'slug' => __('Slug'),
+      'posts' => __('Posts')
+    ) 
+  );
+  $category_args[] = array(
+    'taxonomy'=>'sources-resources-category',
+    'columns'=> array(
+      'cb' => '<input type="checkbox" />',
+      'name' => __('Name'),
+      'tax_image' => __('Image'),
+      'slug' => __('Slug'),
+      'posts' => __('Posts')
+    ) 
+  );
+
+  foreach($category_args as $k=>$c) {
+    $index = $k+1;
+    $taxonomy = $c['taxonomy'];
+    $filter = "manage_edit-".$taxonomy."_columns";
+    $columns = $c['columns'];
+    add_filter($filter, function(){
+      global $category_args;
+      foreach($category_args as $cc) {
+        return $cc['columns'];
+      }
+    }); 
+
+    add_filter("manage_".$taxonomy."_custom_column", function($out, $column_name, $theme_id){
+      global $category_args;
+      foreach($category_args as $cc) {
+        $taxonomy = $cc['taxonomy'];
+        switch ($column_name) {
+          case 'tax_image': 
+              $photo = get_field('category_image', $taxonomy . '_' . $theme_id);
+              $out = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;">';
+              if($photo) {
+                  $out .= '<span style="display:block;width:100%;height:100%;background:url('.$photo['url'].');background-size:cover;background-position:center"></span>';
+              } else {
+                  $out .= '<i class="dashicons dashicons-camera" style="font-size:33px;position:relative;top:8px;left:-6px;opacity:0.3;"></i>';
+              }
+              $out .= '</span>';
+              break;
+   
+          default:
+              break;
+        }
+        return $out;    
+      }
+    }, 10, 3);
+  }
+
 }
 
 
-add_filter("manage_category_custom_column", 'manage_theme_columns', 10, 3);
-function manage_theme_columns($out, $column_name, $theme_id) {
-    $theme = get_term($theme_id, 'category');
-    switch ($column_name) {
-        case 'tax_image': 
-            $photo = get_field('category_image',$theme); 
-            $out = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;">';
-            if($photo) {
-                $out .= '<span style="display:block;width:100%;height:100%;background:url('.$photo['url'].');background-size:cover;background-position:center"></span>';
-            } else {
-                $out .= '<i class="dashicons dashicons-camera" style="font-size:33px;position:relative;top:8px;left:-6px;opacity:0.3;"></i>';
-            }
-            $out .= '</span>';
-            break;
+//add_filter("manage_edit-category_columns", 'theme_columns'); 
+// function theme_columns($theme_columns) {
+//   $new_columns = array(
+//     'cb' => '<input type="checkbox" />',
+//     'name' => __('Name'),
+//     'tax_image' => __('Image'),
+//     //      'description' => __('Description'),
+//     'slug' => __('Slug'),
+//     'posts' => __('Posts')
+//   );
+//   return $new_columns;
+// }
+
+
+// add_filter("manage_category_custom_column", 'manage_theme_columns', 10, 3);
+// function manage_theme_columns($out, $column_name, $theme_id) {
+//     $theme = get_term($theme_id, 'category');
+//     switch ($column_name) {
+//         case 'tax_image': 
+//             $photo = get_field('category_image',$theme); 
+//             $out = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;">';
+//             if($photo) {
+//                 $out .= '<span style="display:block;width:100%;height:100%;background:url('.$photo['url'].');background-size:cover;background-position:center"></span>';
+//             } else {
+//                 $out .= '<i class="dashicons dashicons-camera" style="font-size:33px;position:relative;top:8px;left:-6px;opacity:0.3;"></i>';
+//             }
+//             $out .= '</span>';
+//             break;
  
-        default:
-            break;
-    }
-    return $out;    
-}
+//         default:
+//             break;
+//     }
+//     return $out;    
+// }
 
