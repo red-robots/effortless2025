@@ -1850,6 +1850,14 @@ body.home #hero .wrapper{max-width:100%}
 .subscribe-container .gform_wrapper form .gform_footer .gform_button.button{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:0;border-radius:0;background-color:#8a7e78;color:#fff;padding:10px 30px 12px;-webkit-box-shadow:none !important;box-shadow:none !important;font-family:"hypatia-sans-pro",sans-serif !important;font-size:16px !important;text-transform:uppercase;-webkit-transition:all ease .3s;transition:all ease .3s}
 .subscribe-container .gform_wrapper form .gform_footer .gform_button.button:hover,.subscribe-container .gform_wrapper form .gform_footer .gform_button.button:focus{background-color:#7a9692;color:#fff}
 .subscribe-container .gform_wrapper form .gform_footer .gform_button.button:focus{outline:1px dotted #fff}
+.intro-wrapper.intro-graphic{position:relative;overflow:hidden;padding:50px 0 30px;margin-bottom:60px}
+.intro-wrapper.intro-graphic:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:2;background:-webkit-gradient(linear,left top,left bottom,color-stop(10%,white),to(rgba(255,255,255,0)));background:linear-gradient(to bottom,white 10%,rgba(255,255,255,0) 100%)}
+.intro-wrapper.intro-graphic:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-image:url("images/pattern-floral.png");background-size:50px}
+.intro-wrapper.intro-graphic .wrapper{max-width:1000px;width:100%;position:relative;z-index:10}
+.intro-wrapper.intro-graphic .text{position:relative;z-index:30;padding-top:30px;padding-bottom:50px}
+.intro-wrapper.intro-graphic .text:has(p){padding-bottom:10px}
+.intro-wrapper.intro-graphic h2{font-family:"Cormorant Garamond",serif !important;text-transform:none;font-style:italic;font-size:80px;line-height:1.1}
+.intro-wrapper.intro-graphic p{font-size:25px;line-height:1.4}
 .featured-dish-container{position:relative}
 .featured-dish-container .intro-wrapper{position:relative;overflow:hidden;padding:50px 0 30px}
 .featured-dish-container .intro-wrapper:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:2;background:-webkit-gradient(linear,left top,left bottom,color-stop(10%,white),to(rgba(255,255,255,0)));background:linear-gradient(to bottom,white 10%,rgba(255,255,255,0) 100%)}
@@ -2388,6 +2396,7 @@ section.testimonials .testimonial{width:80%}
 .template-index>.row-6{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .template-blog>.row-2>.column-1>.wrapper>.post{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .template-members-landing>.row-4{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+}@media screen and (min-width:1500px){.intro-wrapper.intro-graphic .wrapper{max-width:1200px}
 }@media screen and (max-width:1480px){#masthead.site-header.site-header-new.is--home.fixed .logoContainer .wrapper ul.menu a,#masthead.site-header.site-header-new.is--subpage .logoContainer .wrapper ul.menu a{font-size:1.06vw}
 }@media screen and (max-width:1250px){#masthead.site-header.site-header-new .logoContainer .mainNav{display:none !important}
 .site-footer.site-footer-new .footLeft,.site-footer.site-footer-new .footRight{width:100% !important}
