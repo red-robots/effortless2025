@@ -7,8 +7,9 @@
  * @package ACStarter
  */
 
-
-$post_type = array('sources-resources');
+$default_post_type = array('sources-resources');
+$selected_post_types = get_field('post_type');
+$post_type = ($selected_post_types) ? $selected_post_types : array('sources-resources');
 $perpage = 20;
 $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
 $args = array(
@@ -81,20 +82,29 @@ else if($total_found>1) {
 <section id="products-container" class="product-list-container">
   <div class="container">
     <?php while ( $entries->have_posts() ) : $entries->the_post(); 
+      $permalink = get_permalink();
       $website_link = get_field("website_link");
       $pdf_link = get_field("pdf_link");
       $image = get_field("search_image");
       $company = get_field("company");
-      $product_title = get_field("product_title");
-      if( $pdf_link || $website_link ) { ?>
+      $product_title = ( get_field("product_title") ) ? get_field("product_title") : get_the_title();
+      if(!$image) {
+        //$thumb = get_the_post_thumbnail_url(get_the_ID());
+        $image = get_field('search_image');
+      }
+      if( $pdf_link || $website_link || $permalink ) { ?>
       <div class="item">
         <?php if ($pdf_link) { ?>
         <a href="<?php echo $pdf_link['url'] ?>" target="_blank">
-        <?php } else { ?>
+        <?php } else if($website_link) { ?>
         <a href="<?php echo $website_link ?>" target="_blank">
+        <?php } else { ?>
+        <a href="<?php echo $permalink ?>">
         <?php } ?>
           <?php if ($image) { ?>
           <figure><img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>"></figure>
+          <?php } else { ?>
+          <figure class="no-image"><img src="<?php echo get_template_directory_uri() ?>/images/coming-soon.jpg" alt=""></figure>
           <?php } ?>
           <?php if($product_title||$company) { ?>
           <figcaption>

@@ -101,7 +101,7 @@ jQuery(document).ready(function($){
 
   function doSmoothScroll(target) {
     var target = $(target);
-    var topOffset = $('#masthead').outerHeight() + 70;
+    var topOffset = $('#masthead').outerHeight() + 100;
     if (target.length) {
       $('html, body').animate({
         scrollTop: target.offset().top - topOffset
