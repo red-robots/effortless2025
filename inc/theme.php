@@ -7,13 +7,13 @@
  * @package ACStarter
  */
 
-function SearchFilter($query) {
-    if ($query->is_search) {
-        $query->set('post_type', 'post');
-    }
-    return $query;
-}
-add_filter('pre_get_posts','SearchFilter');
+// function SearchFilter($query) {
+//     if ($query->is_search) {
+//         $query->set('post_type', 'post');
+//     }
+//     return $query;
+// }
+// add_filter('pre_get_posts','SearchFilter');
 
 
 add_filter('woocommerce_save_account_details_required_fields', 'wc_save_account_details_required_fields' );

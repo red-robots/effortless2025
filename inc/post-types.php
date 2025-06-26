@@ -9,7 +9,6 @@ function js_custom_init() {
       'plural'    => 'Menus',
       'single'    => 'Menu',
       'menu_icon' => 'dashicons-editor-table',
-      'menu_position' => 20,
       'supports'  => array('title','editor','custom-fields','thumbnail')
     ),
     array(
@@ -18,7 +17,6 @@ function js_custom_init() {
       'plural'    => 'Recipes',
       'single'    => 'Recipe',
       'menu_icon' => 'dashicons-book',
-      'menu_position' => 20,
       'supports'  => array('title','editor','custom-fields','thumbnail')
     ),
     array(
@@ -27,7 +25,6 @@ function js_custom_init() {
       'plural'    => 'Tips & Quips',
       'single'    => 'Tip or Quip',
       'menu_icon' => 'dashicons-editor-help',
-      'menu_position' => 20,
       'supports'  => array('title','editor','custom-fields','thumbnail')
     ),
     array(
@@ -35,7 +32,6 @@ function js_custom_init() {
       'menu_name' => 'Style Points',
       'plural'    => 'Style Points',
       'single'    => 'Style Point',
-      'menu_position' => 20,
       'supports'  => array('title','editor','custom-fields','thumbnail')
     ),
     array(
@@ -44,7 +40,6 @@ function js_custom_init() {
       'plural'    => 'Sources & Resources',
       'single'    => 'Source or Resource',
       'menu_icon' => 'dashicons-admin-links',
-      'menu_position' => 20,
       'supports'  => array('title','editor','custom-fields','thumbnail')
     ),
     array(
@@ -53,7 +48,6 @@ function js_custom_init() {
       'plural'    => 'Testimonials',
       'single'    => 'Testimonial',
       'menu_icon' => 'dashicons-format-quote',
-      'menu_position' => 20,
       'supports'  => array('title','editor','custom-fields','thumbnail')
     ),
   );
