@@ -1153,6 +1153,20 @@ body.home #hero .wrapper {
     font-size: 25px;
     line-height: 1.4;
   }
+  &:has(.background-image-overlay) {
+    &:before, &:after {
+      display: none;
+    }
+    .background-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-position: center;
+    }
+  }
 }
 
 .featured-dish-container {
