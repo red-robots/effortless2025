@@ -1241,6 +1241,9 @@ body.home #hero .wrapper {
         @include tab {
           padding: 30px 50px 40px;
         }
+        @include mid {
+          padding: 50px 80px;
+        }
       }
       h2, h3 {
         @include intro_heading;
@@ -1264,6 +1267,7 @@ body.home #hero .wrapper {
     .flexwrap:has(.feat-image):has(.text) {
       .feat-image, .text {
         width: 100%;
+        min-height: 570px;
         @include sm {
           width: 50%;
         }
