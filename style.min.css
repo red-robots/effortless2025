@@ -2207,10 +2207,11 @@ body.page-template:not(.page-template-page-repeatable) #content.wrapper{padding-
 .content-sources-resources .product-list-container .container .item a:hover figcaption h3,.content-sources-resources .product-list-container .container .item a:hover figcaption h4,.content-sources-resources .product-list-container .container .item a:focus figcaption h3,.content-sources-resources .product-list-container .container .item a:focus figcaption h4{color:#90b0ac}
 .content-sources-resources .product-list-container .pagination-wrapper{margin-top:30px}
 .repeatable--image_and_text_column .single-product .woocommerce-product-gallery,.repeatable--image_and_text_column .single-product .product_meta,.repeatable--image_and_text_column .single-product .product_title.entry-title,.repeatable--image_and_text_column .woocommerce-tabs.wc-tabs-wrapper{display:none !important}
-.repeatable--image_and_text_column .summary.entry-summary{width:100% !important;float:none !important;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1em}
+.repeatable--image_and_text_column .summary.entry-summary{margin:0 0 !important;width:100% !important;float:none !important;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;gap:1em}
 .repeatable--image_and_text_column .summary.entry-summary p.price{margin:0 0 !important}
 .repeatable--image_and_text_column .summary.entry-summary form.cart{margin:0 0 !important}
 .repeatable--image_and_text_column .summary.entry-summary form.cart input.input-text.qty{height:38px !important;border-radius:0 !important;margin-right:5px;line-height:1;-webkit-box-sizing:border-box;box-sizing:border-box;color:#5e5e5e !important;padding:5px 5px 6px !important}
+.repeatable--image_and_text_column .textCol:has(div.woocommerce):has(p.product.add_to_cart_inline) div.woocommerce:has(.single-product){border-bottom:1px solid #8a7e78;margin-bottom:35px;padding-bottom:45px}
 @media screen and (min-width:350px){.template-menu .column-2 img.featured{float:right;width:40%;margin:0}
 }@media screen and (min-width:600px){#cboxTitle{position:absolute;top:0;left:-999px;text-align:left;width:20%;font-weight:bold;color:#fff;padding:8% 2% 8% 2%;line-height:1.3;font-size:20px}
 #cboxClose{right:-40px;top:-40px;background-position:-100px 0}
