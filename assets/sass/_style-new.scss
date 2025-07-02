@@ -3549,7 +3549,7 @@ body.page-template:not(.page-template-page-repeatable) {
 }
 
 
-.repeatable--image_and_text_column {
+.repeatable {
   .single-product .woocommerce-product-gallery,
   .single-product .product_meta,
   .single-product .product_title.entry-title,
@@ -3583,7 +3583,7 @@ body.page-template:not(.page-template-page-repeatable) {
       }
     }
   }
-  .textCol:has(div.woocommerce):has(p.product.add_to_cart_inline) {
+  .text:has(div.woocommerce):has(p.product.add_to_cart_inline) {
     div.woocommerce:has(.single-product) {
       border-bottom: 1px solid #8a7e78;
       margin-bottom: 35px;
