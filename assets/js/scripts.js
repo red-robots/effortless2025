@@ -220,4 +220,32 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  if( window.location.hash ) {
+    //do_smooth_scroll(window.location.hash);
+    setTimeout(function(){
+      do_smooth_scroll(window.location.hash,500);
+    }, 600);
+    setTimeout(function(){
+      do_smooth_scroll(window.location.hash,200);
+    }, 601);
+  }
+
+  function do_smooth_scroll(hashTag,speed) {
+    let target = $(hashTag);
+    let topOffset = $('#masthead').outerHeight() + 30;
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top - topOffset
+      }, speed, function() {
+        target.focus();
+        if (target.is(":focus")) {
+          return false;
+        } else {
+          target.attr('tabindex','-1'); 
+          target.focus().css('outline','0'); 
+        };
+      });
+    }
+  }
+
 });

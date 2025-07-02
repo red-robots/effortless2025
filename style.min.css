@@ -1707,8 +1707,10 @@ html,body,*,::before,::after{-webkit-box-sizing:border-box;box-sizing:border-box
 #wpadminbar{position:fixed !important;top:0;left:0}
 body{font-family:"hypatia-sans-pro",sans-serif;font-weight:300;font-size:20px;line-height:1.4;color:#776b65}
 .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.button,.button-element.button{display:inline-block;text-decoration:none;background-color:#776b65;padding:9px 20px 10px;color:#fff;text-decoration:none;font-family:"hypatia-sans-pro",sans-serif !important;font-size:16px;line-height:1.2;letter-spacing:.04em;text-transform:uppercase;-webkit-transition:all ease .3s;transition:all ease .3s}
+.button,.button-element.button{display:inline-block;text-decoration:none;background-color:#776b65;padding:9px 20px 10px;color:#fff;text-decoration:none;font-family:"hypatia-sans-pro",sans-serif !important;font-size:16px;font-weight:500;line-height:1.2;letter-spacing:.04em;text-transform:uppercase;-webkit-transition:all ease .3s;transition:all ease .3s}
 .button:hover,.button:focus,.button-element.button:hover,.button-element.button:focus{background-color:#90b0ac;color:#fff}
+.button.button-green,.button-element.button.button-green{background-color:#90b0ac;color:#fff}
+.button.button-green:hover,.button.button-green:focus,.button-element.button.button-green:hover,.button-element.button.button-green:focus{background-color:#776b65}
 #masthead.site-header.site-header-new{width:100%;background:#fff;-webkit-transition:all ease .3s;transition:all ease .3s;z-index:9999;font-weight:normal}
 #masthead.site-header.site-header-new #site-navigation.main-navigation ul.menu a{display:inline-block;-webkit-transition:all ease .3s;transition:all ease .3s;font-family:"hypatia-sans-pro",sans-serif !important}
 #masthead.site-header.site-header-new #site-navigation.main-navigation ul.menu>li>a:hover,#masthead.site-header.site-header-new #site-navigation.main-navigation ul.menu>li>a:focus{color:#90b0ac}
@@ -1968,6 +1970,45 @@ body.single #hero.hero-image:has(.heroText) .heroText h1,body.single #hero.hero-
 body.single #main #hero{margin-bottom:50px}
 body.single #main #hero .wrapper{max-width:100%;width:100%;padding:0}
 body.single #main .template-single{width:100%}
+body.single article.hentry img.aligncenter{width:100% !important;height:auto !important}
+body.single article.hentry:has(.content-block):has(.sidebar-content){display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+body.single article.hentry:has(.content-block):has(.sidebar-content) .content-block{width:100%;margin-bottom:30px}
+body.single article.hentry:has(.content-block):has(.sidebar-content) .sidebar-content{max-width:500px;width:100%;margin:0 auto}
+body.single article.hentry .sidebar-content .widget{width:100%;float:left;background:#f7f7f7;text-align:center;margin-bottom:35px}
+body.single article.hentry .sidebar-content .widget h2,body.single article.hentry .sidebar-content .widget .widgetTitle{font-family:"hypatia-sans-pro",sans-serif;font-size:35px;font-weight:400;line-height:1.4;text-transform:uppercase;color:#90b0ac;margin:0;font-size:28px !important;font-weight:300 !important;line-height:1.2 !important}
+body.single article.hentry .sidebar-content .widget .button.button-green{min-width:180px;text-align:center}
+body.single article.hentry .sidebar-content .widget .widgetImage{width:100%;float:left;margin:0 0 !important}
+body.single article.hentry .sidebar-content .widget .widgetImage img{width:100%;height:auto;float:left}
+body.single article.hentry .sidebar-content .widget .widgetText{width:100%;float:left;padding:25px 40px 35px}
+body.single article.hentry .sidebar-content .widget .widgetText p{margin-top:5px;margin-bottom:15px;font-size:17px;font-weight:300;line-height:1.4;color:#6d6d6d}
+body.single article.hentry .sidebar-content .widget .widgetText p em{font-style:italic}
+body.single article.hentry .sidebar-content .widget .button-wrap{margin-top:20px}
+body.single article.hentry .sidebar-content .widget ul.archives{margin:0;padding:0;list-style:none}
+body.single article.hentry .sidebar-content .widget ul.archives li{text-align:center;margin:6px 0}
+body.single article.hentry .sidebar-content .widget ul.archives li a{display:inline-block;text-decoration:none;color:#776b65;font-size:20px;font-weight:400;line-height:1.2;letter-spacing:.03em;text-transform:uppercase}
+body.single article.hentry .sidebar-content .widget ul.archives li a:hover,body.single article.hentry .sidebar-content .widget ul.archives li a:focus{color:#90b0ac}
+body.single article.hentry .sidebar-content .widget.widget-categories{padding:20px 30px}
+body.single article.hentry .sidebar-content .widget.widget-categories .widgetTitle{margin-bottom:10px}
+body.single article.hentry .sidebar-content .widget.widget-categories:has(.button-wrap){padding-bottom:35px}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_legacy_markup_wrapper{margin-top:30px}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields{margin:0;padding:0;list-style:none}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields li.gfield{padding:0 0 !important;margin:7px 0 !important;position:relative}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields li.gfield label.gfield_label{color:#8a7e78 !important;position:absolute;top:7px;left:10px;z-index:5;pointer-events:none;font-size:15px;font-weight:400;-webkit-transition:all ease .3s;transition:all ease .3s}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields li.gfield label.gfield_label .gfield_required{margin-left:2px !important}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields li.gfield .ginput_container{margin:0 0 !important;position:relative}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields li.gfield .ginput_container [name]{width:100% !important;height:34px !important;padding:3px 8px !important;-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:0 !important;border:1px solid #776b65 !important;-webkit-transition:all ease .3s;transition:all ease .3s;font-size:16px !important}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields li.gfield .ginput_container [name]:focus{outline:0;border:1px solid #8a7e78 !important;-webkit-box-shadow:0 0 0 .2rem rgba(138,126,120,.6);box-shadow:0 0 0 .2rem rgba(138,126,120,.6)}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields li.gfield .ginput_container:focus-within{z-index:10}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields li.gfield:has(input:focus) label.gfield_label{top:-35px;left:5px;display:inline-block;background:#000;border-radius:3px;font-size:14px;color:#fff !important;padding:5px 8px;z-index:30}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields li.gfield:has(input:focus) label.gfield_label .gfield_required{color:#f46969 !important}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper ul.gform_fields li.gfield:has(input:focus) label.gfield_label:after{content:"";width:0;height:0;border-top:6px solid #000;border-left:6px solid transparent;border-right:6px solid transparent;position:absolute;left:10px;bottom:-5px}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper .gform_button.button{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0 !important;border:none !important;display:inline-block;text-decoration:none;-webkit-box-shadow:none;box-shadow:none;background-color:#776b65;padding:9px 20px 10px;color:#fff;text-decoration:none;font-family:"hypatia-sans-pro",sans-serif !important;font-size:16px;font-weight:500;line-height:1.2;letter-spacing:.05em;text-transform:uppercase;-webkit-transition:all ease .3s;transition:all ease .3s;text-shadow:none !important}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper .gform_button.button:hover,body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper .gform_button.button:focus{background-color:#738d8a;color:#fff}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper .gform_button.button:focus{outline:0;-webkit-box-shadow:0 0 0 .2rem rgba(138,126,120,.6);box-shadow:0 0 0 .2rem rgba(138,126,120,.6)}
+body.single article.hentry .sidebar-content .widget.widget-text-block .gform_wrapper .gform_footer{padding:0 0 !important;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+body.single article.hentry .sidebar-content .widget.widget-subscribe{background:#90b0ac;color:#fff}
+body.single article.hentry .sidebar-content .widget.widget-subscribe h2,body.single article.hentry .sidebar-content .widget.widget-subscribe p{color:#fff !important}
+body.single article.hentry .sidebar-content .widget.widget-subscribe .widgetText{padding:25px 40px 20px}
 #main .sidewrap{padding:20px 15px}
 #main .sidewrap .search-form{margin:0;width:100%;position:relative}
 #main .sidewrap .search-form *{-webkit-box-sizing:border-box;box-sizing:border-box}
@@ -2143,6 +2184,7 @@ body.page-template:not(.page-template-page-repeatable) #content.wrapper{padding-
 .breadcrumb-dish{position:relative;top:30px}
 .breadcrumb-dish a{display:inline-block;-webkit-transition:all ease .3s;transition:all ease .3s;font-family:"hypatia-sans-pro",sans-serif;font-size:18px;text-transform:uppercase;text-decoration:none;color:#90b0ac;border:1px solid #90b0ac;padding:5px 20px;border-radius:100px}
 .breadcrumb-dish a:hover,.breadcrumb-dish a:focus{color:#fff;border-color:#8a7e78;background-color:#8a7e78}
+.the-dish-content:has(.breadcrumb):has(.titleSection) .titleSection{margin-top:30px}
 .categoryContainer .flexwrap{margin-left:-15px;margin-right:-15px}
 .categoryContainer .flexwrap figure{margin:0;padding:15px}
 .categoryContainer .flexwrap figure .imagewrap{position:relative;overflow:hidden;padding-bottom:100%}
@@ -2219,7 +2261,7 @@ body.page-template:not(.page-template-page-repeatable) #content.wrapper{padding-
 .repeatable p.product.woocommerce.add_to_cart_inline a.add_to_cart_button:focus{outline:1px dotted #90b0ac}
 .woocommerce button.button{-webkit-font-smoothing:initial !important}
 .repeatable.repeatable-first-section{margin-top:70px}
-.site-content.wrapper .repeatable .wrapper{padding-left:0 !important;padding-right:0 !important}
+.site-content.wrapper .breadcrumb .wrapper,.site-content.wrapper .repeatable .wrapper{padding-left:0 !important;padding-right:0 !important}
 @media screen and (min-width:350px){.template-menu .column-2 img.featured{float:right;width:40%;margin:0}
 }@media screen and (min-width:600px){#cboxTitle{position:absolute;top:0;left:-999px;text-align:left;width:20%;font-weight:bold;color:#fff;padding:8% 2% 8% 2%;line-height:1.3;font-size:20px}
 #cboxClose{right:-40px;top:-40px;background-position:-100px 0}
@@ -2442,6 +2484,8 @@ section.testimonials .testimonial{width:80%}
 .hero-slider .section-slideshow .swiper-wrapper{height:620px}
 }@media(min-width:1300px){.featured-dish-container .featuredPost .text .inside{padding:50px 80px}
 .images-4-columns .imageCol{width:25%}
+body.single article.hentry:has(.content-block):has(.sidebar-content) .content-block{width:70%;margin-bottom:0}
+body.single article.hentry:has(.content-block):has(.sidebar-content) .sidebar-content{max-width:unset;width:26%;margin:0}
 }@media screen and (min-width:1400px){.template-index>.row-3,.template-index>.row-4,.template-index>.row-5{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .template-index>.row-3>.column-1 img,.template-index>.row-4>.column-1 img,.template-index>.row-5>.column-1 img{display:block}
 .template-index>.row-6{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
