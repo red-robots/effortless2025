@@ -3549,4 +3549,16 @@ body.page-template:not(.page-template-page-repeatable) {
 }
 
 
+.repeatable--image_and_text_column {
+  .single-product .woocommerce-product-gallery,
+  .woocommerce-tabs.wc-tabs-wrapper {
+    display: none!important;
+  }
+  .summary.entry-summary {
+    width: 100%!important;
+    float: none!important;
+  }
+}
+
+
 
