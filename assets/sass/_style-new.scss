@@ -3592,7 +3592,7 @@ body.page-template:not(.page-template-page-repeatable) {
   }
   p.product.woocommerce.add_to_cart_inline  {
     margin-bottom: 20px;
-    .add_to_cart_button {
+    a.add_to_cart_button {
       @include button_style;
     }
   }
