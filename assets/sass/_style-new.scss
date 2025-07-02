@@ -3566,6 +3566,9 @@ body.page-template:not(.page-template-page-repeatable) {
     gap: 1em;
     p.price {
       margin: 0 0!important;
+      .woocommerce-Price-amount {
+        font-size: 25px;
+      }
     }
     form.cart {
       margin: 0 0!important;
