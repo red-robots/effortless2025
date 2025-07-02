@@ -2217,6 +2217,7 @@ body.page-template:not(.page-template-page-repeatable) #content.wrapper{padding-
 .repeatable p.product.woocommerce.add_to_cart_inline a.add_to_cart_button{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;appearance:none;border:0;border-radius:0;background-color:#8a7e78;color:#fff;padding:10px 30px 12px;-webkit-box-shadow:none !important;box-shadow:none !important;font-family:"hypatia-sans-pro",sans-serif !important;font-size:16px !important;text-transform:uppercase;-webkit-transition:all ease .3s;transition:all ease .3s}
 .repeatable p.product.woocommerce.add_to_cart_inline a.add_to_cart_button:hover,.repeatable p.product.woocommerce.add_to_cart_inline a.add_to_cart_button:focus{background-color:#90b0ac;color:#fff}
 .repeatable p.product.woocommerce.add_to_cart_inline a.add_to_cart_button:focus{outline:1px dotted #90b0ac}
+.woocommerce button.button{-webkit-font-smoothing:initial !important}
 .repeatable.repeatable-first-section{margin-top:70px}
 .site-content.wrapper .repeatable .wrapper{padding-left:0 !important;padding-right:0 !important}
 @media screen and (min-width:350px){.template-menu .column-2 img.featured{float:right;width:40%;margin:0}

@@ -3598,7 +3598,9 @@ body.page-template:not(.page-template-page-repeatable) {
     }
   }
 }
-
+.woocommerce button.button {
+  -webkit-font-smoothing: initial!important;
+}
 .repeatable.repeatable-first-section {
   margin-top: 70px;
 }
