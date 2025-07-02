@@ -2213,6 +2213,10 @@ body.page-template:not(.page-template-page-repeatable) #content.wrapper{padding-
 .repeatable .summary.entry-summary form.cart{margin:0 0 !important}
 .repeatable .summary.entry-summary form.cart input.input-text.qty{height:38px !important;border-radius:0 !important;margin-right:5px;line-height:1;-webkit-box-sizing:border-box;box-sizing:border-box;color:#5e5e5e !important;padding:5px 5px 6px !important}
 .repeatable .text:has(div.woocommerce):has(p.product.add_to_cart_inline) div.woocommerce:has(.single-product){border-bottom:1px solid #8a7e78;margin-bottom:35px;padding-bottom:45px}
+.repeatable p.product.woocommerce.add_to_cart_inline{margin-bottom:20px}
+.repeatable p.product.woocommerce.add_to_cart_inline .add_to_cart_button{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;appearance:none;border:0;border-radius:0;background-color:#8a7e78;color:#fff;padding:10px 30px 12px;-webkit-box-shadow:none !important;box-shadow:none !important;font-family:"hypatia-sans-pro",sans-serif !important;font-size:16px !important;text-transform:uppercase;-webkit-transition:all ease .3s;transition:all ease .3s}
+.repeatable p.product.woocommerce.add_to_cart_inline .add_to_cart_button:hover,.repeatable p.product.woocommerce.add_to_cart_inline .add_to_cart_button:focus{background-color:#90b0ac;color:#fff}
+.repeatable p.product.woocommerce.add_to_cart_inline .add_to_cart_button:focus{outline:1px dotted #90b0ac}
 .repeatable.repeatable-first-section{margin-top:70px}
 .site-content.wrapper .repeatable .wrapper{padding-left:0 !important;padding-right:0 !important}
 @media screen and (min-width:350px){.template-menu .column-2 img.featured{float:right;width:40%;margin:0}
