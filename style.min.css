@@ -1962,7 +1962,7 @@ body.page-template-page-the-dish .site-main .gform_wrapper select:focus,body.pag
 .site-content.wrapper .titleSection .wrapper,.site-content.wrapper .recentPostsContainer .wrapper,.site-content.wrapper .categoryContainer .wrapper{padding-left:0 !important;padding-right:0 !important}
 body:has(#hero) #hero.hero-image:has(.heroText) .hero-content:after{display:none}
 body:has(#hero) #hero.hero-image:has(.heroText) .heroText{max-width:100%;width:100%;margin:0 0 !important;padding:20px 30px;background:rgba(144,176,172,.9)}
-body:has(#hero) #hero.hero-image:has(.heroText) .heroText h1,body:has(#hero) #hero.hero-image:has(.heroText) .heroText h2{font-family:"Cormorant Garamond",serif !important;font-size:clamp(2rem,5vw,50px);font-weight:400;font-style:italic;line-height:1.2;margin:0;color:#fff}
+body:has(#hero) #hero.hero-image:has(.heroText) .heroText h1,body:has(#hero) #hero.hero-image:has(.heroText) .heroText h2{font-family:"Cormorant Garamond",serif !important;font-size:clamp(1.65rem,5vw,50px);font-weight:400;font-style:italic;line-height:1.2;margin:0;color:#fff}
 body:has(#hero) .site-content.wrapper #hero .wrapper{padding-left:0 !important;padding-right:0 !important}
 body.single #hero.hero-image:has(.heroText) .hero-content:after{display:none}
 body.single #hero.hero-image:has(.heroText) .heroText{max-width:100%;width:100%;margin:0 0 !important;padding:20px 30px;background:rgba(144,176,172,.9)}
@@ -2493,6 +2493,7 @@ body.single article.hentry:has(.content-block):has(.sidebar-content) .sidebar-co
 .template-members-landing>.row-4{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 }@media screen and (min-width:1500px){.intro-wrapper.intro-graphic .wrapper{max-width:1200px}
 }@media screen and (max-width:1480px){#masthead.site-header.site-header-new.is--home.fixed .logoContainer .wrapper ul.menu a,#masthead.site-header.site-header-new.is--subpage .logoContainer .wrapper ul.menu a{font-size:1.06vw}
+}@media screen and (max-width:1280px){#hero .hero-content{height:clamp(320px,35vw,430px)}
 }@media screen and (max-width:1250px){#masthead.site-header.site-header-new .logoContainer .mainNav{display:none !important}
 .site-footer.site-footer-new .footLeft,.site-footer.site-footer-new .footRight{width:100% !important}
 .site-footer.site-footer-new .footRight{padding-top:40px}
@@ -2571,7 +2572,8 @@ body:has(#wpadminbar) .MobileHeader .mobile-main-navigation{margin-top:45px}
 }@media screen and (max-width:700px){.template-index>.row-2{background-image:none !important}
 .template-how .row-1.template-header{margin-bottom:0}
 .template-join .row-1.template-header{margin-bottom:0}
-}@media screen and (max-width:480px){.repeatable--magazine_layout .magazineBlocks .magazine{width:100% !important}
+}@media screen and (max-width:480px){body:has(#hero) #hero.hero-image:has(.heroText) .heroText{padding-left:15px;padding-right:15px}
+.repeatable--magazine_layout .magazineBlocks .magazine{width:100% !important}
 }@-webkit-keyframes bounce{from,20%,53%,80%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.61,0.355,1);animation-timing-function:cubic-bezier(0.215,0.61,0.355,1);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 40%,43%{-webkit-animation-timing-function:cubic-bezier(0.755,0.05,0.855,0.06);animation-timing-function:cubic-bezier(0.755,0.05,0.855,0.06);-webkit-transform:translate3d(0,-30px,0);transform:translate3d(0,-30px,0)}
 70%{-webkit-animation-timing-function:cubic-bezier(0.755,0.05,0.855,0.06);animation-timing-function:cubic-bezier(0.755,0.05,0.855,0.06);-webkit-transform:translate3d(0,-15px,0);transform:translate3d(0,-15px,0)}

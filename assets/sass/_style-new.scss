@@ -1821,9 +1821,13 @@ body:has(#hero) {
       margin: 0 0!important;
       padding: 20px 30px;
       background: rgba($color_secondary, 90%);
+      @media screen and (max-width:480px) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
       h1, h2 {
         font-family: $font_secondary!important;
-        font-size: clamp(2rem, 5vw, 50px);
+        font-size: clamp(1.65rem, 5vw, 50px);
         font-weight: 400;
         font-style: italic;
         line-height: 1.2;
@@ -3867,5 +3871,10 @@ body.page-template:not(.page-template-page-repeatable) {
   padding-right: 0!important;
 }
 
+@media screen and (max-width: 1280px) {
+  #hero .hero-content {
+    height: clamp(320px, 35vw, 430px);
+  }
+}
 
 
