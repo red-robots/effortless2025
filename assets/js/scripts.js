@@ -73,40 +73,89 @@ jQuery(document).ready(function ($) {
     },500);
   });
 
-  const testimonialSwiper = new Swiper('.testimonialSwiper', {
-    slidesPerView: 1,
-    // autoHeight: true,
-    centeredSlides: true,
-    roundLengths: true,
-    spaceBetween: 20,
-    loop: true,
-    noSwiping: true,
-    simulateTouch: true,
-    speed: 1000,
-    slidesPerView: 1,
-    autoplay: {
-      delay: 6000
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    breakpoints: {
-      1080: {
-        slidesPerView: 1,
+  if( $('.testimonialSwiper').length ) {
+    $('.testimonialSwiper').each(function(k){
+      var ctr = k+1;
+      var testimonialsID = 'sliderTestimonials'+ctr;
+      $(this).attr('id', testimonialsID);
+      setTimeout(function(){
+        displayTestimonialSwiper('#'+testimonialsID);
+      },5);
+    });
+  }
+
+  function displayTestimonialSwiper(selector) {
+    let testimonialSwiper = new Swiper(selector, {
+      slidesPerView: 1,
+      // autoHeight: true,
+      centeredSlides: true,
+      roundLengths: true,
+      spaceBetween: 20,
+      loop: true,
+      noSwiping: true,
+      simulateTouch: true,
+      speed: 1000,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 6000
       },
-      1024: {
-        slidesPerView: 2,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
       },
-      1250: {
-        slidesPerView: 3,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      breakpoints: {
+        1080: {
+          slidesPerView: 1,
+        },
+        1024: {
+          slidesPerView: 2,
+        },
+        1250: {
+          slidesPerView: 3,
+        }
       }
-    }
-  });
+    });
+  }
+
+
+  // const testimonialSwiper = new Swiper('.testimonialSwiper', {
+  //   slidesPerView: 1,
+  //   // autoHeight: true,
+  //   centeredSlides: true,
+  //   roundLengths: true,
+  //   spaceBetween: 20,
+  //   loop: true,
+  //   noSwiping: true,
+  //   simulateTouch: true,
+  //   speed: 1000,
+  //   slidesPerView: 1,
+  //   autoplay: {
+  //     delay: 6000
+  //   },
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     clickable: true
+  //   },
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev"
+  //   },
+  //   breakpoints: {
+  //     1080: {
+  //       slidesPerView: 1,
+  //     },
+  //     1024: {
+  //       slidesPerView: 2,
+  //     },
+  //     1250: {
+  //       slidesPerView: 3,
+  //     }
+  //   }
+  // });
 
   if( $('.section-slideshow').length ) {
     $('.section-slideshow').each(function(){

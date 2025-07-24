@@ -1812,6 +1812,8 @@ body.home #hero .wrapper{max-width:100%}
 .testimonial-carousel{position:relative;z-index:200}
 .testimonial-carousel .inner-wrapper{max-width:1600px;width:100%;margin:0 auto;padding-left:30px;padding-right:30px}
 .testimonial-carousel .intro-wrapper{padding-bottom:35px}
+.testimonial-carousel .swiper{opacity:0;-webkit-transition:opacity ease .5s;transition:opacity ease .5s}
+.testimonial-carousel .swiper.swiper-initialized{opacity:1;-webkit-transition-delay:.8s;transition-delay:.8s}
 .testimonial-carousel .swiper-container{position:relative;width:90vw;height:300px}
 .testimonial-carousel .swiper{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:60px 0 110px}
 .testimonial-carousel .swiper-wrapper{height:auto !important;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important}
