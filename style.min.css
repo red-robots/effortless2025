@@ -2521,9 +2521,10 @@ body.single article.hentry:has(.content-block):has(.sidebar-content) .sidebar-co
 #masthead.site-header.site-header-new.is--subpage .logoContainer .wrapper{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 #masthead.site-header.site-header-new.is--subpage .logoContainer .wrapper .logo{display:inline-block;width:220px}
 #masthead.site-header.site-header-new.is--subpage .logoContainer .wrapper .logo a,#masthead.site-header.site-header-new.is--subpage .logoContainer .wrapper .logo img{display:block;width:100%}
+#masthead.site-header.site-header-new.fixed{height:75px;background:#fff}
 #masthead.site-header.site-header-new.fixed .rightCol{display:none !important}
 #masthead.site-header.site-header-new.fixed .mobileMenuToggle{top:18px;-webkit-transform:none;transform:none}
-#masthead.site-header.site-header-new.fixed .row-1 .wrapper{padding:0 0 !important}
+#masthead.site-header.site-header-new.fixed .row-1 .wrapper{padding:0 0 !important;height:75px;position:absolute;top:0;right:0;width:30%;z-index:20}
 #masthead.site-header.site-header-new.fixed .row-2.logoContainer .wrapper{-webkit-box-pack:start !important;-ms-flex-pack:start !important;justify-content:flex-start !important}
 #masthead.site-header.site-header-new.fixed .row-2.logoContainer .wrapper .logo{width:auto !important}
 #masthead.site-header.site-header-new.fixed .row-2.logoContainer .wrapper .logo img{width:190px !important}

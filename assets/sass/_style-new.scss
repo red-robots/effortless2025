@@ -3094,15 +3094,24 @@ h2:has(.cursiveHeading) {
       }
     }
     &.fixed {
+      height: 75px;
+      background: #FFF;
       .rightCol {
         display: none!important;
       }
+
       .mobileMenuToggle {
         top: 18px;
         transform: none;
       }
       .row-1 .wrapper {
         padding: 0 0!important;
+        height: 75px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30%;
+        z-index: 20;
       }
       .row-2.logoContainer .wrapper {
         justify-content: flex-start!important;
