@@ -3888,6 +3888,270 @@ body.page-template:not(.page-template-page-repeatable) {
   padding-right: 0!important;
 }
 
+.marketing-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 30px;
+  // display: flex;
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  z-index: 99999999;
+  background: rgba(255,255,255,.75);
+  transition: all ease .3s;
+  &.show {
+    display: flex;
+  }
+  &.hidden {
+    display: none!important;
+  }
+  .marketing-pop-content {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    background: $color_secondary;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+    border-radius: 0;
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
+    animation-duration: 1s;
+    animation-name: fadeInDown;
+    .flexwrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      position: relative;
+      min-height: 300px;
+      .imageCol {
+        width: 100%;
+        padding: 20px;
+        figure {
+          margin: 0 0;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .textCol {
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .text {
+          width: 100%;
+        }
+        @media screen and (min-width: 1400px) {
+          padding: 50px 4vw;
+        }
+        h2 {
+          @include intro_heading;
+          color: #FFF;
+          margin-bottom: 15px;
+        }
+        p {
+          margin-top: 0;
+          margin-bottom: 10px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &.half {
+        .imageCol {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 45%;
+          height: 100%;
+          figure {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0 0;
+            img {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+        }
+        .textCol {
+          width: 55%;
+        }
+      }
+    }
+    
+  }
+  .mpopCloseBtn {
+    appearance: none;
+    border: none;
+    display: block;
+    width: 35px;
+    height: 35px;
+    padding: 0 0!important;
+    border-radius: 2px!important;
+    box-shadow: none!important;
+    background: $color_secondary;
+    color: #FFF;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    transition: all ease .3s;
+    cursor: pointer;
+    &:before, &:after {
+      content:"";
+      display: block;
+      width: 70%;
+      height: 3px;
+      background: #FFF;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: all ease .3s;
+    }
+    &:before {
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+    &:after {
+      transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+    &:hover {
+      background-color: rgba(0,0,0,.2)!important;
+    }
+  }
+
+  .gform_wrapper {
+    margin: 30px 0 0!important;
+    .gform_heading {
+      text-align: center;
+      margin: 0 0!important;
+      h3, p {
+        text-align: center;
+        &:empty {
+          display: none;
+        }
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+    form {
+      display: block;
+      max-width: 350px;
+      width: 100%;
+      margin: 0 auto;
+      input[type="text"],
+      input[type="email"] {
+        border: 1px solid #707070;
+        border-radius: 0;
+        background-color: #FFF;
+        font-family: $font_primary!important;
+        font-size: 18px!important;
+        height: 38px;
+        color: #000;
+        padding: 5px 10px!important;
+        width: 100%;
+        transition: all ease .3s;
+      }
+      ul.gform_fields {
+        list-style: none;
+        margin: 0 0;
+        padding: 0 0;
+      }
+      ul.gform_fields > li.gfield {
+        padding: 0 0!important;
+        width: 100%;
+        margin: 5px 0!important;
+         .gfield_label {
+          display: none!important;
+        }
+      }
+      .gform_footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        padding-top: 15px;
+        .gform_button.button {
+          appearance: none;
+          border: none;
+          border-radius: 0;
+          background-color: #8A7E78;
+          color: #FFF;
+          padding: 10px 30px 12px;
+          box-shadow: none!important;
+          font-family: $font_primary!important;
+          font-size: 16px!important;
+          text-transform: uppercase;
+          transition: all ease .3s;
+          &:hover, &:focus {
+            background-color: shade($color_secondary, 15%);
+            color: #FFF;
+          }
+          &:focus {
+            outline: 1px dotted #FFF;
+          }
+        }
+      }
+    }
+  }
+
+  &.closed {
+    .marketing-pop-content {
+      animation-duration: 0.6s;
+      animation-name: fadeOutUp;
+    }
+  }
+
+  @media screen and (max-width:960px) {
+    .marketing-pop-content {
+      .flexwrap {
+        .imageCol, .textCol {
+          width: 100%!important;
+        }
+        .imageCol {
+          position: relative!important;
+          height: auto!important;
+          padding-bottom: 30%;
+        }
+      }
+      .mpopCloseBtn {
+        background-color: $color_primary;
+        &:hover, &:focus {
+          background-color: $color_secondary!important;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .marketing-pop-content {
+      .flexwrap {
+        .imageCol {
+          padding-bottom: 45%;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1280px) {
   #hero .hero-content {
     height: clamp(320px, 35vw, 430px);

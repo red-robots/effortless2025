@@ -224,6 +224,21 @@
   display: block !important;
 }
 
+.toplevel_page_acf-options [data-type=group][data-name=newsletter_popup] .acf-input .acf-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.toplevel_page_acf-options [data-type=group][data-name=newsletter_popup] .acf-input .acf-fields .acf-field {
+  width: 100%;
+}
+.toplevel_page_acf-options [data-type=group][data-name=newsletter_popup] .acf-input .acf-fields .acf-field[data-name=text] {
+  width: 70%;
+}
+.toplevel_page_acf-options [data-type=group][data-name=newsletter_popup] .acf-input .acf-fields .acf-field[data-name=image] {
+  width: 28%;
+}
+
 /*==== HOME SECTIONS ORDER ===*/
 .acf-field-repeater[data-name=home_section_order] .acf-actions,
 .acf-field-repeater[data-name=home_section_order] .acf-table tbody tr td:last-child,

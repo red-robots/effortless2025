@@ -87,6 +87,8 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<?php get_template_part('parts/marketing-popup'); ?>
+
 <?php wp_footer(); ?>
 
 </body>

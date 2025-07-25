@@ -297,4 +297,37 @@ jQuery(document).ready(function ($) {
     }
   }
 
+  
+  //Clear storage after specific time
+  //var logoutTimer = setTimeout(function() { sessionStorage.clear(); }, (60 * 60 * 1000)); // 24 hours
+  //sessionStorage.removeItem('marketingPopupShown'); /* Uncomment to remove session */
+
+  if(sessionStorage.getItem('marketingPopupShown')) {
+    setTimeout(function() { sessionStorage.removeItem('marketingPopupShown'); }, (60 * 60 * 1000)); // 24 hours
+  }
+
+  if( $('.marketing-popup-container').length ) {
+    if(!sessionStorage.getItem('marketingPopupShown')) {
+      sessionStorage.setItem('marketingPopupShown', true);
+      $('.marketing-popup-container').addClass('show');
+    }
+    if( sessionStorage.getItem('marketingPopupShown')=='true' ) {
+      $('.marketing-popup-container').addClass('show');
+    } else {
+      $('.marketing-popup-container').removeClass('show');
+    }
+  }
+
+  $(document).on('click', '.mpopCloseBtn', function(e){
+    e.preventDefault();
+    $('.marketing-popup-container').addClass('closed');
+    setTimeout(function(){
+      $('.marketing-popup-container').removeClass('closed');
+      $('.marketing-popup-container').removeClass('show');
+      sessionStorage.setItem('marketingPopupShown', false);
+    },605);
+  });
+
+  
+
 });
