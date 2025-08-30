@@ -1,11 +1,21 @@
-.member-section-page,
 .member-section-page {
   box-sizing: border-box;
 }
-.member-section-page:before, .member-section-page:after,
-.member-section-page:before,
-.member-section-page:after {
+.member-section-page:before, .member-section-page:after {
   box-sizing: border-box;
+}
+.member-section-page .template-filter.hentry .column-1 {
+  display: none;
+}
+.member-section-page .template-filter.hentry .column-1:has(a) {
+  display: block;
+}
+.member-section-page .template-filter.hentry .column-2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.member-section-page .template-filter.hentry:has(.column-1 a) .column-2 {
+  padding-left: 4%;
 }
 
 .button-mobile-wrapper {
