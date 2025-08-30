@@ -112,6 +112,7 @@
   background-color: #776b65;
   color: #FFF;
 }
+#masthead-login > .row-1 > .wrapper .rightCol .button-primary,
 #masthead-login > .row-1 > .wrapper .rightCol .logout-button {
   padding: 7px 10px;
   background-color: #776b65;
@@ -124,7 +125,9 @@
   letter-spacing: 0.05em;
   transition: all ease 0.3s;
 }
-#masthead-login > .row-1 > .wrapper .rightCol .logout-button:hover, #masthead-login > .row-1 > .wrapper .rightCol .logout-button:focus {
+#masthead-login > .row-1 > .wrapper .rightCol .button-primary:hover, #masthead-login > .row-1 > .wrapper .rightCol .button-primary:focus,
+#masthead-login > .row-1 > .wrapper .rightCol .logout-button:hover,
+#masthead-login > .row-1 > .wrapper .rightCol .logout-button:focus {
   background-color: rgba(0, 0, 0, 0.15);
 }
 #masthead-login > .row-1 > .wrapper .search-form {

@@ -59,7 +59,8 @@ endif;?>
                   $account_text = get_field("account_text","option");
                   if($account_text&&$account_link):?>
                     <?php if ( is_user_logged_in() ) { ?>
-                      <a href="<?php echo wp_logout_url( '/my-account/?redirect_to=/member-section/' ); ?>" title="Logout" class="logout-button">Logout</a>
+                      <!-- <a href="<?php echo wp_logout_url( '/my-account/?redirect_to=/member-section/' ); ?>" title="Logout" class="logout-button">Logout</a> -->
+                      <a href="<?php echo get_site_url() ?>/member-section/" class="button-primary">Your EE Guide</a>
                     <?php } else { ?>
                       <div class="account button">
                           <a href="<?php echo $account_link;?>" class="surrounding">
