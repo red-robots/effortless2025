@@ -23,51 +23,62 @@ if($ga):
     echo $ga;
 endif;?>
 <?php wp_head(); ?>
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/members.css" />
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
 
-	<header id="masthead-login" class="site-header clear-bottom" role="banner">
+<div id="page" class="member-section-page site">
+
+	<header id="masthead-login" class="site-header" role="banner">
         <div class="row-1">
-            <div class="wrapper full-width-wrapper clear-bottom">
+            <div class="wrapper full-width-wrapper">
+                <div class="leftCol">
                 <?php $return_text = get_field("return_to_main_site_text","option");
                 if($return_text):?>
                     <a class="return" href="<?php echo get_bloginfo("url");?>"><i class="fa fa-arrow-left"></i>&nbsp;<?php echo $return_text;?></a>
                 <?php endif;?>
-                <div id="cart-icon" class="cart">
-                    <a href="<?php echo wc_get_cart_url();?>">
-                        <i class="fa fa-shopping-cart"></i>
-                        <div class="num"></div><!--.num-->
-                    </a>
-                </div><!--.cart#cart-icon-->
-                <?php $members_link = get_field("members_link","option");
-                if($members_link):?>
-                    <div class="members button">
-                        <a href="<?php echo $members_link;?>" class="surrounding">
-                            <i class="fa fa-user"></i>
-                        </a>
-                    </div>
-                <?php endif;?>
-                <?php $account_link = get_field("account_link","option");
-                $account_text = get_field("account_text","option");
-                if($account_text&&$account_link):?>
-                    <div class="account button">
-                        <a href="<?php echo $account_link;?>" class="surrounding">
-                            <?php echo $account_text; ?>
-                        </a>
-                    </div>
-                <?php endif;?>
-                <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) );?>">
-                    <label>
-                        <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' );?></span>
-                        <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder' );?>" value="<?php echo get_search_query();?>" name="s" />
-                    </label>
-                </form>
+                </div>
+
+                <div class="rightCol">
+                  <div id="cart-icon" class="cart">
+                      <a href="<?php echo wc_get_cart_url();?>">
+                          <i class="fa fa-shopping-cart"></i>
+                          <div class="num"></div><!--.num-->
+                      </a>
+                  </div><!--.cart#cart-icon-->
+                  <?php $members_link = get_field("members_link","option");
+                  if($members_link):?>
+                      <div class="members button">
+                          <a href="<?php echo $members_link;?>" class="surrounding">
+                              <i class="fa fa-user"></i>
+                          </a>
+                      </div>
+                  <?php endif;?>
+                  <?php $account_link = get_field("account_link","option");
+                  $account_text = get_field("account_text","option");
+                  if($account_text&&$account_link):?>
+                    <?php if ( is_user_logged_in() ) { ?>
+                      <a href="<?php echo wp_logout_url( '/my-account/?redirect_to=/member-section/' ); ?>" title="Logout" class="logout-button">Logout</a>
+                    <?php } else { ?>
+                      <div class="account button">
+                          <a href="<?php echo $account_link;?>" class="surrounding">
+                              <?php echo $account_text; ?>
+                          </a>
+                      </div>
+                    <?php } ?>
+                  <?php endif;?>
+                  <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) );?>">
+                      <label>
+                          <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' );?></span>
+                          <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder' );?>" value="<?php echo get_search_query();?>" name="s" />
+                      </label>
+                  </form>
+                </div>
             </div><!--.wrapper-->
         </div><!--.row-1-->
         <div class="row-2">
-            <div class="wrapper full-width-wrapper clear-bottom">
+            <div class="wrapper full-width-wrapper">
                 <?php $logo = get_field("logo","option");
                 if($logo):?>
                     <div class="logo">
@@ -78,9 +89,9 @@ endif;?>
                 <?php endif;?>
                 <?php $mobilebuttontext = get_field("mobile_button_text","option");?>
                 <?php if($mobilebuttontext):?>
-                    <div class="button">
-                        <?php echo $mobilebuttontext;?>
-                    </div><!--.button-->
+                <div class="button-mobile-wrapper">
+                  <button class="button btn-mobile-toggle" aria-expanded="false" aria-controls="login-site-navigation"><?php echo $mobilebuttontext;?></button>
+                </div>
                 <?php endif;?>
                 <nav id="login-site-navigation" class="login-nav">
                     <?php wp_nav_menu( array( 'theme_location' => 'login' ) ); ?>

@@ -7,7 +7,7 @@
  * @package ACStarter
  */
 
-$image = get_field("template_header_image");
+$image = get_field("template_header");
 ?>
 <?php if ( $image ) { ?>
 <section id="hero" class="hero-image">

@@ -40,11 +40,17 @@ function acstarter_scripts() {
   // );
 
   wp_enqueue_script( 
-     'acstarter-flexslider', 
-     get_template_directory_uri() . '/assets/js/scripts.js', 
-     array(), '20120206', 
-     true 
-   );
+    'acstarter-customjs', 
+    get_template_directory_uri() . '/assets/js/scripts.js', 
+    array(), '20120206', 
+    true 
+  );
+  wp_enqueue_script( 
+    'acstarter-members', 
+    get_template_directory_uri() . '/assets/js/members.js', 
+    array(), '1.0', 
+    true 
+  );
 
 	wp_localize_script( 'acstarter-custom', 'bellaajaxurl', array(
 		'url' => admin_url( 'admin-ajax.php' )

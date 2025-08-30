@@ -1,0 +1,309 @@
+.member-section-page,
+.member-section-page {
+  box-sizing: border-box;
+}
+.member-section-page:before, .member-section-page:after,
+.member-section-page:before,
+.member-section-page:after {
+  box-sizing: border-box;
+}
+
+.button-mobile-wrapper {
+  display: none;
+}
+
+#masthead-login > .row-2 > .wrapper {
+  max-width: 1540px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#masthead-login > .row-2 > .wrapper #login-site-navigation {
+  width: auto;
+  margin: 0 0 !important;
+  padding: 0 0 !important;
+  flex: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#masthead-login > .row-1 > .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1499px) {
+  #masthead-login > .row-1 > .wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+#masthead-login > .row-1 > .wrapper .rightCol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+#masthead-login > .row-1 > .wrapper .rightCol #cart-icon.cart, #masthead-login > .row-1 > .wrapper .rightCol .members.button, #masthead-login > .row-1 > .wrapper .rightCol .account.button {
+  margin: 0 0 !important;
+  box-sizing: border-box;
+  position: relative;
+  float: none;
+}
+#masthead-login > .row-1 > .wrapper .rightCol #cart-icon.cart,
+#masthead-login > .row-1 > .wrapper .rightCol .members.button {
+  width: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+#masthead-login > .row-1 > .wrapper .rightCol .members.button {
+  padding: 0 0;
+  background-color: transparent;
+}
+#masthead-login > .row-1 > .wrapper .rightCol .members.button a {
+  padding: 7px 10px;
+  display: inline-flex;
+  transition: all ease 0.3s;
+}
+#masthead-login > .row-1 > .wrapper .rightCol .members.button a:hover, #masthead-login > .row-1 > .wrapper .rightCol .members.button a:focus {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#masthead-login > .row-1 > .wrapper .rightCol #cart-icon.cart a {
+  padding: 7px 10px;
+  display: inline-flex;
+  transition: all ease 0.3s;
+}
+#masthead-login > .row-1 > .wrapper .rightCol #cart-icon.cart a:hover, #masthead-login > .row-1 > .wrapper .rightCol #cart-icon.cart a:focus {
+  color: #FFF !important;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#masthead-login > .row-1 > .wrapper .rightCol .account.button {
+  padding: 5px 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+#masthead-login > .row-1 > .wrapper .rightCol .account.button:has(a) {
+  padding: 0 0;
+  background-color: transparent;
+}
+#masthead-login > .row-1 > .wrapper .rightCol .account.button a {
+  display: inline-flex;
+  padding: 8px 15px;
+  background-color: #776b65;
+  color: #FFF;
+}
+#masthead-login > .row-1 > .wrapper .rightCol .logout-button {
+  padding: 7px 10px;
+  background-color: #776b65;
+  color: #FFF;
+  display: inline-flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all ease 0.3s;
+}
+#masthead-login > .row-1 > .wrapper .rightCol .logout-button:hover, #masthead-login > .row-1 > .wrapper .rightCol .logout-button:focus {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#masthead-login > .row-1 > .wrapper .search-form {
+  margin: 0 0;
+  padding: 0 0;
+  position: relative;
+  border: none;
+  height: 35px;
+  width: 180px;
+  box-sizing: border-box;
+}
+#masthead-login > .row-1 > .wrapper .search-form * {
+  box-sizing: border-box;
+}
+#masthead-login > .row-1 > .wrapper .search-form ::placeholder {
+  color: #FFF;
+  font-size: 18px;
+}
+#masthead-login > .row-1 > .wrapper .search-form:before {
+  margin: 0 0;
+  position: absolute;
+  top: 48%;
+  right: 15px;
+  transform: translateY(-50%);
+  z-index: 100;
+  pointer-events: none;
+}
+#masthead-login > .row-1 > .wrapper .search-form label {
+  margin: 0 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#masthead-login > .row-1 > .wrapper .search-form input.search-field {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: 1px solid #FFF;
+  padding: 5px 15px;
+  font-size: 18px;
+  color: #FFF;
+  transition: all ease 0.3s;
+}
+#masthead-login > .row-1 > .wrapper .search-form input.search-field:focus {
+  outline: 0;
+  background-color: #829493 !important;
+  border-color: #d8edec;
+}
+
+.template-members-landing > .row-3 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+@media screen and (max-width: 1160px) {
+  .member-section-page #content.wrapper {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  #masthead-login > .row-2 > .wrapper {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  #masthead-login > .row-2 > .wrapper #login-site-navigation {
+    display: none;
+    width: 100%;
+    margin-top: 20px !important;
+    padding-top: 15px !important;
+    border-top: 1px solid #c7c7c7;
+  }
+  #masthead-login > .row-2 > .wrapper #login-site-navigation ul.menu > li {
+    width: 100%;
+    margin: 7px 0;
+    padding: 0 0;
+  }
+  #masthead-login > .row-2 > .wrapper #login-site-navigation ul.menu > li > a {
+    display: block;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all ease 0.3s;
+  }
+  #masthead-login > .row-2 > .wrapper #login-site-navigation ul.menu > li > a:hover, #masthead-login > .row-2 > .wrapper #login-site-navigation ul.menu > li > a:focus {
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  #masthead-login > .row-2 > .wrapper .button-mobile-wrapper {
+    display: flex;
+  }
+  #masthead-login > .row-2 > .wrapper .button-mobile-wrapper .button.btn-mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #96A7A6;
+    text-shadow: none;
+    padding: 10px 10px 12px;
+    transition: all ease 0.3s;
+    position: relative;
+    margin: 0 0;
+  }
+  #masthead-login > .row-2 > .wrapper .button-mobile-wrapper .button.btn-mobile-toggle:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+    position: relative;
+    top: -1px;
+    transform: rotate(45deg);
+    transition: all ease 0.3s;
+  }
+  #masthead-login > .row-2 > .wrapper .button-mobile-wrapper .button.btn-mobile-toggle:hover, #masthead-login > .row-2 > .wrapper .button-mobile-wrapper .button.btn-mobile-toggle:focus {
+    background-color: #776b65;
+  }
+  #masthead-login > .row-2 > .wrapper .button-mobile-wrapper .button.btn-mobile-toggle[aria-expanded=true] {
+    background-color: #776b65;
+  }
+  #masthead-login > .row-2 > .wrapper .button-mobile-wrapper .button.btn-mobile-toggle[aria-expanded=true]:after {
+    top: 4px;
+    transform: rotate(225deg);
+  }
+}
+@media screen and (max-width: 700px) {
+  #masthead-login > .row-1 > .wrapper {
+    flex-wrap: wrap;
+  }
+  #masthead-login > .row-1 > .wrapper .leftCol, #masthead-login > .row-1 > .wrapper .rightCol {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #masthead-login > .row-1 > .wrapper .leftCol {
+    margin-bottom: 10px;
+  }
+  #masthead-login > .row-1 > .wrapper .leftCol a.return {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+  #masthead-login > .row-1 > .wrapper .rightCol .search-form {
+    width: 100%;
+    height: 45px;
+    margin: 10px 0 15px;
+  }
+
+  #masthead-login > .row-2 > .wrapper #login-site-navigation {
+    padding-top: 5px !important;
+    margin-top: 23px !important;
+  }
+  #masthead-login > .row-2 > .wrapper .button-mobile-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .member-section-page #content.wrapper {
+    padding-top: 10px;
+  }
+
+  .member-section-page .template-members-landing > .row-3 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .member-section-page .template-members-landing > .row-3 .item {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .member-section-page .template-members-landing > .row-4 > .col-2 > .wrapper {
+    width: 90%;
+  }
+
+  .member-section-page .template-members-landing > .row-4 {
+    margin-bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=members.css.map */
